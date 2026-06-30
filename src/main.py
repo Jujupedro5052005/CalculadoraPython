@@ -68,7 +68,7 @@ class HandlerQT(QtCore.QObject):
         elif "pushButtonDigito" in sender.objectName():
             self.user_input += sender.text()
         
-        # Atualiza texto de entrada do usuário
+        # Atualiza texto de entrada do usuário  -> TODO: parei aqui na lógica do código (tentar fazer o texto sumir após selecionar operação e começar a coloca o novo número)
         """if any(op in self.user_input for op in ["+", "-", "x", "/"]):
             print("oi")
             self.user_input = sender.text()"""
