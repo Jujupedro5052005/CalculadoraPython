@@ -1,6 +1,7 @@
 import inicial
 import normal
 import cientifica
+import dicionario
 
 import sys
 from PyQt5 import QtCore, QtGui, QtWidgets
@@ -16,6 +17,12 @@ class HandlerQT(QtCore.QObject):
         self.ui = self.__name.Ui_Dialog()
         # Atribui os elementos da UI na janela criada
         self.ui.setupUi(self.Dialog)
+        # Variável que recebe as entradas do usuário
+        self.user_input = "0"
+
+    def display_update(self):
+        telas[1].ui.displayUser.setText(self.user_input)
+        telas[2].ui.displayUser.setText(self.user_input)
 
     def btn_push_callback(self, telas):
         sender = self.Dialog.sender()
@@ -26,18 +33,39 @@ class HandlerQT(QtCore.QObject):
             telas[2].Dialog.close()
 
         # Mostrar a tela de calculadora cientifica
-        if sender.objectName() == "pushButtonCientifica":
+        elif sender.objectName() == "pushButtonCientifica":
             telas[2].Dialog.show()
             telas[1].Dialog.close()
         
         # Sai da tela de calculadora normal ou da cientifica
-        if sender.objectName() == "pushButtonVoltar":
+        elif sender.objectName() == "pushButtonVoltar":
             telas[1].Dialog.close()
             telas[2].Dialog.close()
+
+        # Backspace no ultimo elemento do texto
+        elif sender.objectName() == "pushButtonBACK":
+            if len(self.user_input) != 0:
+                self.user_input = self.user_input[:-1]
+
+        # Limpa texto do usuário
+        elif sender.objectName() == "pushButtonClear":
+            self.user_input = "0"
+
+        # Insere ponto decimal
+        elif sender.objectName() == "pushButtonDOT":
+            if not("." in self.user_input):
+                self.user_input += "."
         
-        # Mostra digito no line edit
-        if "pushButtonDigito" in sender.objectName():
-            telas[1].ui.lineEditUsuario.setText(sender.text())
+        # Atualiza texto de entrada do usuário
+        elif "pushButtonDigito" in sender.objectName():
+            self.user_input += sender.text()
+            #telas[2].ui.lineEditUsuario.setText(sender.text())
+
+        # Processa a seleção de operação
+        elif "pushButtonOP" in sender.objectName():
+            self.user_input += sender.text()
+
+        self.display_update()
 
 
 if __name__ == "__main__":
@@ -53,126 +81,9 @@ if __name__ == "__main__":
     # Mostra tela inicial
     telas[0].Dialog.show()
 
-    # Começa os textos de saida zerados
-    telas[1].ui.lineEditUsuario.setText("0")
-    telas[2].ui.lineEditUsuario.setText("0")
-
-    telas[1].ui.textBrowser.setHtml("""<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Page</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #4facfe, #00f2fe);
-            color: #333;
-        }
-
-        header {
-            background: rgba(255, 255, 255, 0.9);
-            padding: 20px;
-            text-align: center;
-            font-size: 1.8em;
-            font-weight: bold;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 20px;
-        }
-
-        .card {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
-        }
-
-        button {
-            background: #4facfe;
-            border: none;
-            padding: 12px 20px;
-            color: white;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 1em;
-            transition: 0.3s;
-        }
-
-        button:hover {
-            background: #0077ff;
-        }
-
-        footer {
-            text-align: center;
-            padding: 15px;
-            color: white;
-            font-size: 0.9em;
-        }
-    </style>
-</head>
-<body>
-
-<header>
-    My Test Page
-</header>
-
-<div class="container">
-    <div class="card">
-        <h2>Welcome 👋</h2>
-        <p>This is a simple, clean HTML test page with modern styling.</p>
-        <button onclick="showMessage()">Click Me</button>
-    </div>
-
-    <div class="card">
-        <h3>Features</h3>
-        <ul>
-            <li>Responsive layout</li>
-            <li>Gradient background</li>
-            <li>Card design</li>
-            <li>Interactive button</li>
-        </ul>
-    </div>
-</div>
-
-<footer>
-    © 2026 Test Page
-</footer>
-
-<script>
-    function showMessage() {
-        alert("Button clicked! 🎉");
-    }
-</script>
-
-</body>
-</html>""")
-    
-    ui_inicial.ui.pushButtonNormal.setStyleSheet("""
-QPushButton {
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 2px;
-    padding: 6px 12px;
-}
-
-QPushButton:hover {
-    background-color: #0056b3;
-}
-
-QPushButton:pressed {
-    background-color: #004494;
-}
-""")
-    
-
+    # Começa com os textos de saida zerados
+    telas[1].ui.displayUser.setText("0")
+    telas[2].ui.displayUser.setText("0")
 
     # Usando a função do sender (organizar os eventos de callback)
     ui_inicial.ui.pushButtonNormal.clicked.connect(lambda: ui_inicial.btn_push_callback(telas))
@@ -184,7 +95,10 @@ QPushButton:pressed {
     ui_cientifica.ui.pushButtonDigito1.clicked.connect(lambda: ui_inicial.btn_push_callback(telas))
     ui_cientifica.ui.pushButtonDigito2.clicked.connect(lambda: ui_inicial.btn_push_callback(telas))
     ui_cientifica.ui.pushButtonDigito3.clicked.connect(lambda: ui_inicial.btn_push_callback(telas))
-    
+
+    # Declara todos os botões utilizando o o dicionario estático de ElementsUI para ui_normal
+    for value, button in dicionario.ElementsUI.digit_buttons(ui_normal).items():
+        button.clicked.connect(lambda: ui_inicial.btn_push_callback(telas))
 
     # Espera a interrupcao do usuario para finalizar
     sys.exit(app.exec_())

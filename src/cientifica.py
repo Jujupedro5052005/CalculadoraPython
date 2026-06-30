@@ -17,6 +17,11 @@ class Ui_Dialog(object):
         Dialog.resize(400, 300)
         self.pushButtonDigito1 = QtWidgets.QPushButton(Dialog)
         self.pushButtonDigito1.setGeometry(QtCore.QRect(130, 120, 75, 23))
+        self.pushButtonDigito1.setStyleSheet(" background-color: #007BFF;\n"
+" color: white;\n"
+" border: none;\n"
+" border-radius: 10px;\n"
+" padding: 6px 12px;")
         self.pushButtonDigito1.setObjectName("pushButtonDigito1")
         self.pushButtonDigito2 = QtWidgets.QPushButton(Dialog)
         self.pushButtonDigito2.setGeometry(QtCore.QRect(130, 150, 75, 23))
@@ -33,12 +38,12 @@ class Ui_Dialog(object):
         self.lineEdit_3.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.lineEdit_3.setReadOnly(False)
         self.lineEdit_3.setObjectName("lineEdit_3")
-        self.lineEditUsuario = QtWidgets.QLineEdit(Dialog)
-        self.lineEditUsuario.setGeometry(QtCore.QRect(110, 80, 113, 20))
-        self.lineEditUsuario.setReadOnly(True)
-        self.lineEditUsuario.setObjectName("lineEditUsuario")
+        self.displayUser = QtWidgets.QLineEdit(Dialog)
+        self.displayUser.setGeometry(QtCore.QRect(110, 80, 113, 20))
+        self.displayUser.setReadOnly(True)
+        self.displayUser.setObjectName("displayUser")
         self.pushButtonDigito3 = QtWidgets.QPushButton(Dialog)
-        self.pushButtonDigito3.setGeometry(QtCore.QRect(130, 190, 75, 23))
+        self.pushButtonDigito3.setGeometry(QtCore.QRect(130, 180, 75, 23))
         self.pushButtonDigito3.setObjectName("pushButtonDigito3")
 
         self.retranslateUi(Dialog)

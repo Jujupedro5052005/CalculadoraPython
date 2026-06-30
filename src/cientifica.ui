@@ -84,7 +84,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEditUsuario">
+  <widget class="QLineEdit" name="displayUser">
    <property name="geometry">
     <rect>
      <x>110</x>
