@@ -145,13 +145,13 @@ class Ui_Dialog(object):
         self.gridLayout.setContentsMargins(0, 0, 0, 0)
         self.gridLayout.setSpacing(4)
         self.gridLayout.setObjectName("gridLayout")
-        self.pushButtonDigito8 = QtWidgets.QPushButton(self.gridLayoutWidget)
+        self.pushButtonDigitoN8 = QtWidgets.QPushButton(self.gridLayoutWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.pushButtonDigito8.sizePolicy().hasHeightForWidth())
-        self.pushButtonDigito8.setSizePolicy(sizePolicy)
-        self.pushButtonDigito8.setStyleSheet("QPushButton {\n"
+        sizePolicy.setHeightForWidth(self.pushButtonDigitoN8.sizePolicy().hasHeightForWidth())
+        self.pushButtonDigitoN8.setSizePolicy(sizePolicy)
+        self.pushButtonDigitoN8.setStyleSheet("QPushButton {\n"
 "\n"
 "    background-color: qlineargradient(\n"
 "        x1: 0, y1: 0,\n"
@@ -173,15 +173,15 @@ class Ui_Dialog(object):
 "\n"
 "    letter-spacing: 0.4px;\n"
 "}")
-        self.pushButtonDigito8.setObjectName("pushButtonDigito8")
-        self.gridLayout.addWidget(self.pushButtonDigito8, 1, 1, 1, 1)
-        self.pushButtonDigito9 = QtWidgets.QPushButton(self.gridLayoutWidget)
+        self.pushButtonDigitoN8.setObjectName("pushButtonDigitoN8")
+        self.gridLayout.addWidget(self.pushButtonDigitoN8, 1, 1, 1, 1)
+        self.pushButtonDigitoN9 = QtWidgets.QPushButton(self.gridLayoutWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.pushButtonDigito9.sizePolicy().hasHeightForWidth())
-        self.pushButtonDigito9.setSizePolicy(sizePolicy)
-        self.pushButtonDigito9.setStyleSheet("QPushButton {\n"
+        sizePolicy.setHeightForWidth(self.pushButtonDigitoN9.sizePolicy().hasHeightForWidth())
+        self.pushButtonDigitoN9.setSizePolicy(sizePolicy)
+        self.pushButtonDigitoN9.setStyleSheet("QPushButton {\n"
 "\n"
 "    background-color: qlineargradient(\n"
 "        x1: 0, y1: 0,\n"
@@ -203,15 +203,15 @@ class Ui_Dialog(object):
 "\n"
 "    letter-spacing: 0.4px;\n"
 "}")
-        self.pushButtonDigito9.setObjectName("pushButtonDigito9")
-        self.gridLayout.addWidget(self.pushButtonDigito9, 1, 2, 1, 1)
-        self.pushButtonOP_MUL = QtWidgets.QPushButton(self.gridLayoutWidget)
+        self.pushButtonDigitoN9.setObjectName("pushButtonDigitoN9")
+        self.gridLayout.addWidget(self.pushButtonDigitoN9, 1, 2, 1, 1)
+        self.pushButtonOPN_MUL = QtWidgets.QPushButton(self.gridLayoutWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.pushButtonOP_MUL.sizePolicy().hasHeightForWidth())
-        self.pushButtonOP_MUL.setSizePolicy(sizePolicy)
-        self.pushButtonOP_MUL.setStyleSheet("QPushButton {\n"
+        sizePolicy.setHeightForWidth(self.pushButtonOPN_MUL.sizePolicy().hasHeightForWidth())
+        self.pushButtonOPN_MUL.setSizePolicy(sizePolicy)
+        self.pushButtonOPN_MUL.setStyleSheet("QPushButton {\n"
 "\n"
 "    background-color: qlineargradient(\n"
 "        x1: 0, y1: 0,\n"
@@ -256,15 +256,15 @@ class Ui_Dialog(object):
 "    padding-top: 9px;\n"
 "    padding-left: 15px;\n"
 "}")
-        self.pushButtonOP_MUL.setObjectName("pushButtonOP_MUL")
-        self.gridLayout.addWidget(self.pushButtonOP_MUL, 2, 3, 1, 1)
-        self.pushButtonDOT = QtWidgets.QPushButton(self.gridLayoutWidget)
+        self.pushButtonOPN_MUL.setObjectName("pushButtonOPN_MUL")
+        self.gridLayout.addWidget(self.pushButtonOPN_MUL, 2, 3, 1, 1)
+        self.pushButtonN_DOT = QtWidgets.QPushButton(self.gridLayoutWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.pushButtonDOT.sizePolicy().hasHeightForWidth())
-        self.pushButtonDOT.setSizePolicy(sizePolicy)
-        self.pushButtonDOT.setStyleSheet("QPushButton {\n"
+        sizePolicy.setHeightForWidth(self.pushButtonN_DOT.sizePolicy().hasHeightForWidth())
+        self.pushButtonN_DOT.setSizePolicy(sizePolicy)
+        self.pushButtonN_DOT.setStyleSheet("QPushButton {\n"
 "\n"
 "    background-color: qlineargradient(\n"
 "        x1: 0, y1: 0,\n"
@@ -286,15 +286,15 @@ class Ui_Dialog(object):
 "\n"
 "    letter-spacing: 0.4px;\n"
 "}")
-        self.pushButtonDOT.setObjectName("pushButtonDOT")
-        self.gridLayout.addWidget(self.pushButtonDOT, 4, 1, 1, 1)
-        self.pushButtonDigito3 = QtWidgets.QPushButton(self.gridLayoutWidget)
+        self.pushButtonN_DOT.setObjectName("pushButtonN_DOT")
+        self.gridLayout.addWidget(self.pushButtonN_DOT, 4, 1, 1, 1)
+        self.pushButtonDigitoN3 = QtWidgets.QPushButton(self.gridLayoutWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.pushButtonDigito3.sizePolicy().hasHeightForWidth())
-        self.pushButtonDigito3.setSizePolicy(sizePolicy)
-        self.pushButtonDigito3.setStyleSheet("QPushButton {\n"
+        sizePolicy.setHeightForWidth(self.pushButtonDigitoN3.sizePolicy().hasHeightForWidth())
+        self.pushButtonDigitoN3.setSizePolicy(sizePolicy)
+        self.pushButtonDigitoN3.setStyleSheet("QPushButton {\n"
 "\n"
 "    background-color: qlineargradient(\n"
 "        x1: 0, y1: 0,\n"
@@ -316,15 +316,15 @@ class Ui_Dialog(object):
 "\n"
 "    letter-spacing: 0.4px;\n"
 "}")
-        self.pushButtonDigito3.setObjectName("pushButtonDigito3")
-        self.gridLayout.addWidget(self.pushButtonDigito3, 3, 0, 1, 1)
-        self.pushButtonDigito1 = QtWidgets.QPushButton(self.gridLayoutWidget)
+        self.pushButtonDigitoN3.setObjectName("pushButtonDigitoN3")
+        self.gridLayout.addWidget(self.pushButtonDigitoN3, 3, 0, 1, 1)
+        self.pushButtonDigitoN1 = QtWidgets.QPushButton(self.gridLayoutWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.pushButtonDigito1.sizePolicy().hasHeightForWidth())
-        self.pushButtonDigito1.setSizePolicy(sizePolicy)
-        self.pushButtonDigito1.setStyleSheet("QPushButton {\n"
+        sizePolicy.setHeightForWidth(self.pushButtonDigitoN1.sizePolicy().hasHeightForWidth())
+        self.pushButtonDigitoN1.setSizePolicy(sizePolicy)
+        self.pushButtonDigitoN1.setStyleSheet("QPushButton {\n"
 "\n"
 "    background-color: qlineargradient(\n"
 "        x1: 0, y1: 0,\n"
@@ -346,15 +346,15 @@ class Ui_Dialog(object):
 "\n"
 "    letter-spacing: 0.4px;\n"
 "}")
-        self.pushButtonDigito1.setObjectName("pushButtonDigito1")
-        self.gridLayout.addWidget(self.pushButtonDigito1, 3, 2, 1, 1)
-        self.pushButtonDigito5 = QtWidgets.QPushButton(self.gridLayoutWidget)
+        self.pushButtonDigitoN1.setObjectName("pushButtonDigitoN1")
+        self.gridLayout.addWidget(self.pushButtonDigitoN1, 3, 2, 1, 1)
+        self.pushButtonDigitoN5 = QtWidgets.QPushButton(self.gridLayoutWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.pushButtonDigito5.sizePolicy().hasHeightForWidth())
-        self.pushButtonDigito5.setSizePolicy(sizePolicy)
-        self.pushButtonDigito5.setStyleSheet("QPushButton {\n"
+        sizePolicy.setHeightForWidth(self.pushButtonDigitoN5.sizePolicy().hasHeightForWidth())
+        self.pushButtonDigitoN5.setSizePolicy(sizePolicy)
+        self.pushButtonDigitoN5.setStyleSheet("QPushButton {\n"
 "\n"
 "    background-color: qlineargradient(\n"
 "        x1: 0, y1: 0,\n"
@@ -376,15 +376,15 @@ class Ui_Dialog(object):
 "\n"
 "    letter-spacing: 0.4px;\n"
 "}")
-        self.pushButtonDigito5.setObjectName("pushButtonDigito5")
-        self.gridLayout.addWidget(self.pushButtonDigito5, 2, 1, 1, 1)
-        self.pushButtonDigito2 = QtWidgets.QPushButton(self.gridLayoutWidget)
+        self.pushButtonDigitoN5.setObjectName("pushButtonDigitoN5")
+        self.gridLayout.addWidget(self.pushButtonDigitoN5, 2, 1, 1, 1)
+        self.pushButtonDigitoN2 = QtWidgets.QPushButton(self.gridLayoutWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.pushButtonDigito2.sizePolicy().hasHeightForWidth())
-        self.pushButtonDigito2.setSizePolicy(sizePolicy)
-        self.pushButtonDigito2.setStyleSheet("QPushButton {\n"
+        sizePolicy.setHeightForWidth(self.pushButtonDigitoN2.sizePolicy().hasHeightForWidth())
+        self.pushButtonDigitoN2.setSizePolicy(sizePolicy)
+        self.pushButtonDigitoN2.setStyleSheet("QPushButton {\n"
 "\n"
 "    background-color: qlineargradient(\n"
 "        x1: 0, y1: 0,\n"
@@ -406,15 +406,15 @@ class Ui_Dialog(object):
 "\n"
 "    letter-spacing: 0.4px;\n"
 "}")
-        self.pushButtonDigito2.setObjectName("pushButtonDigito2")
-        self.gridLayout.addWidget(self.pushButtonDigito2, 3, 1, 1, 1)
-        self.pushButtonOP_EQU = QtWidgets.QPushButton(self.gridLayoutWidget)
+        self.pushButtonDigitoN2.setObjectName("pushButtonDigitoN2")
+        self.gridLayout.addWidget(self.pushButtonDigitoN2, 3, 1, 1, 1)
+        self.pushButtonOPN_EQU = QtWidgets.QPushButton(self.gridLayoutWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.pushButtonOP_EQU.sizePolicy().hasHeightForWidth())
-        self.pushButtonOP_EQU.setSizePolicy(sizePolicy)
-        self.pushButtonOP_EQU.setStyleSheet("QPushButton {\n"
+        sizePolicy.setHeightForWidth(self.pushButtonOPN_EQU.sizePolicy().hasHeightForWidth())
+        self.pushButtonOPN_EQU.setSizePolicy(sizePolicy)
+        self.pushButtonOPN_EQU.setStyleSheet("QPushButton {\n"
 "\n"
 "    background-color: qlineargradient(\n"
 "        x1: 0, y1: 0,\n"
@@ -459,15 +459,15 @@ class Ui_Dialog(object):
 "    padding-top: 9px;\n"
 "    padding-left: 15px;\n"
 "}")
-        self.pushButtonOP_EQU.setObjectName("pushButtonOP_EQU")
-        self.gridLayout.addWidget(self.pushButtonOP_EQU, 4, 2, 1, 1)
-        self.pushButtonOP_ADD = QtWidgets.QPushButton(self.gridLayoutWidget)
+        self.pushButtonOPN_EQU.setObjectName("pushButtonOPN_EQU")
+        self.gridLayout.addWidget(self.pushButtonOPN_EQU, 4, 2, 1, 1)
+        self.pushButtonOPN_ADD = QtWidgets.QPushButton(self.gridLayoutWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.pushButtonOP_ADD.sizePolicy().hasHeightForWidth())
-        self.pushButtonOP_ADD.setSizePolicy(sizePolicy)
-        self.pushButtonOP_ADD.setStyleSheet("QPushButton {\n"
+        sizePolicy.setHeightForWidth(self.pushButtonOPN_ADD.sizePolicy().hasHeightForWidth())
+        self.pushButtonOPN_ADD.setSizePolicy(sizePolicy)
+        self.pushButtonOPN_ADD.setStyleSheet("QPushButton {\n"
 "\n"
 "    background-color: qlineargradient(\n"
 "        x1: 0, y1: 0,\n"
@@ -512,15 +512,15 @@ class Ui_Dialog(object):
 "    padding-top: 9px;\n"
 "    padding-left: 15px;\n"
 "}")
-        self.pushButtonOP_ADD.setObjectName("pushButtonOP_ADD")
-        self.gridLayout.addWidget(self.pushButtonOP_ADD, 4, 3, 1, 1)
-        self.pushButtonDigito4 = QtWidgets.QPushButton(self.gridLayoutWidget)
+        self.pushButtonOPN_ADD.setObjectName("pushButtonOPN_ADD")
+        self.gridLayout.addWidget(self.pushButtonOPN_ADD, 4, 3, 1, 1)
+        self.pushButtonDigitoN4 = QtWidgets.QPushButton(self.gridLayoutWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.pushButtonDigito4.sizePolicy().hasHeightForWidth())
-        self.pushButtonDigito4.setSizePolicy(sizePolicy)
-        self.pushButtonDigito4.setStyleSheet("QPushButton {\n"
+        sizePolicy.setHeightForWidth(self.pushButtonDigitoN4.sizePolicy().hasHeightForWidth())
+        self.pushButtonDigitoN4.setSizePolicy(sizePolicy)
+        self.pushButtonDigitoN4.setStyleSheet("QPushButton {\n"
 "\n"
 "    background-color: qlineargradient(\n"
 "        x1: 0, y1: 0,\n"
@@ -542,15 +542,15 @@ class Ui_Dialog(object):
 "\n"
 "    letter-spacing: 0.4px;\n"
 "}")
-        self.pushButtonDigito4.setObjectName("pushButtonDigito4")
-        self.gridLayout.addWidget(self.pushButtonDigito4, 2, 0, 1, 1)
-        self.pushButtonDigito7 = QtWidgets.QPushButton(self.gridLayoutWidget)
+        self.pushButtonDigitoN4.setObjectName("pushButtonDigitoN4")
+        self.gridLayout.addWidget(self.pushButtonDigitoN4, 2, 0, 1, 1)
+        self.pushButtonDigitoN7 = QtWidgets.QPushButton(self.gridLayoutWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.pushButtonDigito7.sizePolicy().hasHeightForWidth())
-        self.pushButtonDigito7.setSizePolicy(sizePolicy)
-        self.pushButtonDigito7.setStyleSheet("QPushButton {\n"
+        sizePolicy.setHeightForWidth(self.pushButtonDigitoN7.sizePolicy().hasHeightForWidth())
+        self.pushButtonDigitoN7.setSizePolicy(sizePolicy)
+        self.pushButtonDigitoN7.setStyleSheet("QPushButton {\n"
 "\n"
 "    background-color: qlineargradient(\n"
 "        x1: 0, y1: 0,\n"
@@ -572,15 +572,15 @@ class Ui_Dialog(object):
 "\n"
 "    letter-spacing: 0.4px;\n"
 "}")
-        self.pushButtonDigito7.setObjectName("pushButtonDigito7")
-        self.gridLayout.addWidget(self.pushButtonDigito7, 1, 0, 1, 1)
-        self.pushButtonDigito6 = QtWidgets.QPushButton(self.gridLayoutWidget)
+        self.pushButtonDigitoN7.setObjectName("pushButtonDigitoN7")
+        self.gridLayout.addWidget(self.pushButtonDigitoN7, 1, 0, 1, 1)
+        self.pushButtonDigitoN6 = QtWidgets.QPushButton(self.gridLayoutWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.pushButtonDigito6.sizePolicy().hasHeightForWidth())
-        self.pushButtonDigito6.setSizePolicy(sizePolicy)
-        self.pushButtonDigito6.setStyleSheet("QPushButton {\n"
+        sizePolicy.setHeightForWidth(self.pushButtonDigitoN6.sizePolicy().hasHeightForWidth())
+        self.pushButtonDigitoN6.setSizePolicy(sizePolicy)
+        self.pushButtonDigitoN6.setStyleSheet("QPushButton {\n"
 "\n"
 "    background-color: qlineargradient(\n"
 "        x1: 0, y1: 0,\n"
@@ -602,15 +602,15 @@ class Ui_Dialog(object):
 "\n"
 "    letter-spacing: 0.4px;\n"
 "}")
-        self.pushButtonDigito6.setObjectName("pushButtonDigito6")
-        self.gridLayout.addWidget(self.pushButtonDigito6, 2, 2, 1, 1)
-        self.pushButtonDigito0 = QtWidgets.QPushButton(self.gridLayoutWidget)
+        self.pushButtonDigitoN6.setObjectName("pushButtonDigitoN6")
+        self.gridLayout.addWidget(self.pushButtonDigitoN6, 2, 2, 1, 1)
+        self.pushButtonDigitoN0 = QtWidgets.QPushButton(self.gridLayoutWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.pushButtonDigito0.sizePolicy().hasHeightForWidth())
-        self.pushButtonDigito0.setSizePolicy(sizePolicy)
-        self.pushButtonDigito0.setStyleSheet("QPushButton {\n"
+        sizePolicy.setHeightForWidth(self.pushButtonDigitoN0.sizePolicy().hasHeightForWidth())
+        self.pushButtonDigitoN0.setSizePolicy(sizePolicy)
+        self.pushButtonDigitoN0.setStyleSheet("QPushButton {\n"
 "\n"
 "    background-color: qlineargradient(\n"
 "        x1: 0, y1: 0,\n"
@@ -632,15 +632,15 @@ class Ui_Dialog(object):
 "\n"
 "    letter-spacing: 0.4px;\n"
 "}")
-        self.pushButtonDigito0.setObjectName("pushButtonDigito0")
-        self.gridLayout.addWidget(self.pushButtonDigito0, 4, 0, 1, 1)
-        self.pushButtonOP_SUB = QtWidgets.QPushButton(self.gridLayoutWidget)
+        self.pushButtonDigitoN0.setObjectName("pushButtonDigitoN0")
+        self.gridLayout.addWidget(self.pushButtonDigitoN0, 4, 0, 1, 1)
+        self.pushButtonOPN_SUB = QtWidgets.QPushButton(self.gridLayoutWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.pushButtonOP_SUB.sizePolicy().hasHeightForWidth())
-        self.pushButtonOP_SUB.setSizePolicy(sizePolicy)
-        self.pushButtonOP_SUB.setStyleSheet("QPushButton {\n"
+        sizePolicy.setHeightForWidth(self.pushButtonOPN_SUB.sizePolicy().hasHeightForWidth())
+        self.pushButtonOPN_SUB.setSizePolicy(sizePolicy)
+        self.pushButtonOPN_SUB.setStyleSheet("QPushButton {\n"
 "\n"
 "    background-color: qlineargradient(\n"
 "        x1: 0, y1: 0,\n"
@@ -685,15 +685,15 @@ class Ui_Dialog(object):
 "    padding-top: 9px;\n"
 "    padding-left: 15px;\n"
 "}")
-        self.pushButtonOP_SUB.setObjectName("pushButtonOP_SUB")
-        self.gridLayout.addWidget(self.pushButtonOP_SUB, 3, 3, 1, 1)
-        self.pushButtonOP_DIV = QtWidgets.QPushButton(self.gridLayoutWidget)
+        self.pushButtonOPN_SUB.setObjectName("pushButtonOPN_SUB")
+        self.gridLayout.addWidget(self.pushButtonOPN_SUB, 3, 3, 1, 1)
+        self.pushButtonOPN_DIV = QtWidgets.QPushButton(self.gridLayoutWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.pushButtonOP_DIV.sizePolicy().hasHeightForWidth())
-        self.pushButtonOP_DIV.setSizePolicy(sizePolicy)
-        self.pushButtonOP_DIV.setStyleSheet("QPushButton {\n"
+        sizePolicy.setHeightForWidth(self.pushButtonOPN_DIV.sizePolicy().hasHeightForWidth())
+        self.pushButtonOPN_DIV.setSizePolicy(sizePolicy)
+        self.pushButtonOPN_DIV.setStyleSheet("QPushButton {\n"
 "\n"
 "    background-color: qlineargradient(\n"
 "        x1: 0, y1: 0,\n"
@@ -738,15 +738,15 @@ class Ui_Dialog(object):
 "    padding-top: 9px;\n"
 "    padding-left: 15px;\n"
 "}")
-        self.pushButtonOP_DIV.setObjectName("pushButtonOP_DIV")
-        self.gridLayout.addWidget(self.pushButtonOP_DIV, 1, 3, 1, 1)
-        self.pushButtonClear = QtWidgets.QPushButton(self.gridLayoutWidget)
+        self.pushButtonOPN_DIV.setObjectName("pushButtonOPN_DIV")
+        self.gridLayout.addWidget(self.pushButtonOPN_DIV, 1, 3, 1, 1)
+        self.pushButtonN_Clear = QtWidgets.QPushButton(self.gridLayoutWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.pushButtonClear.sizePolicy().hasHeightForWidth())
-        self.pushButtonClear.setSizePolicy(sizePolicy)
-        self.pushButtonClear.setStyleSheet("QPushButton {\n"
+        sizePolicy.setHeightForWidth(self.pushButtonN_Clear.sizePolicy().hasHeightForWidth())
+        self.pushButtonN_Clear.setSizePolicy(sizePolicy)
+        self.pushButtonN_Clear.setStyleSheet("QPushButton {\n"
 "\n"
 "    background-color: qlineargradient(\n"
 "        x1: 0, y1: 0,\n"
@@ -790,15 +790,15 @@ class Ui_Dialog(object):
 "    padding-top: 9px;\n"
 "    padding-left: 15px;\n"
 "}")
-        self.pushButtonClear.setObjectName("pushButtonClear")
-        self.gridLayout.addWidget(self.pushButtonClear, 0, 0, 1, 1)
-        self.pushButtonANS = QtWidgets.QPushButton(self.gridLayoutWidget)
+        self.pushButtonN_Clear.setObjectName("pushButtonN_Clear")
+        self.gridLayout.addWidget(self.pushButtonN_Clear, 0, 0, 1, 1)
+        self.pushButtonN_ANS = QtWidgets.QPushButton(self.gridLayoutWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.pushButtonANS.sizePolicy().hasHeightForWidth())
-        self.pushButtonANS.setSizePolicy(sizePolicy)
-        self.pushButtonANS.setStyleSheet("QPushButton {\n"
+        sizePolicy.setHeightForWidth(self.pushButtonN_ANS.sizePolicy().hasHeightForWidth())
+        self.pushButtonN_ANS.setSizePolicy(sizePolicy)
+        self.pushButtonN_ANS.setStyleSheet("QPushButton {\n"
 "\n"
 "    background-color: qlineargradient(\n"
 "        x1: 0, y1: 0,\n"
@@ -842,15 +842,15 @@ class Ui_Dialog(object):
 "    padding-top: 9px;\n"
 "    padding-left: 15px;\n"
 "}")
-        self.pushButtonANS.setObjectName("pushButtonANS")
-        self.gridLayout.addWidget(self.pushButtonANS, 0, 1, 1, 1)
-        self.pushButtonBACK = QtWidgets.QPushButton(self.gridLayoutWidget)
+        self.pushButtonN_ANS.setObjectName("pushButtonN_ANS")
+        self.gridLayout.addWidget(self.pushButtonN_ANS, 0, 1, 1, 1)
+        self.pushButtonN_BACK = QtWidgets.QPushButton(self.gridLayoutWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.pushButtonBACK.sizePolicy().hasHeightForWidth())
-        self.pushButtonBACK.setSizePolicy(sizePolicy)
-        self.pushButtonBACK.setStyleSheet("QPushButton {\n"
+        sizePolicy.setHeightForWidth(self.pushButtonN_BACK.sizePolicy().hasHeightForWidth())
+        self.pushButtonN_BACK.setSizePolicy(sizePolicy)
+        self.pushButtonN_BACK.setStyleSheet("QPushButton {\n"
 "\n"
 "    background-color: qlineargradient(\n"
 "        x1: 0, y1: 0,\n"
@@ -895,8 +895,8 @@ class Ui_Dialog(object):
 "    padding-top: 9px;\n"
 "    padding-left: 15px;\n"
 "}")
-        self.pushButtonBACK.setObjectName("pushButtonBACK")
-        self.gridLayout.addWidget(self.pushButtonBACK, 0, 2, 1, 1)
+        self.pushButtonN_BACK.setObjectName("pushButtonN_BACK")
+        self.gridLayout.addWidget(self.pushButtonN_BACK, 0, 3, 1, 1)
         self.gridLayout.setRowMinimumHeight(0, 1)
         self.gridLayout.setRowMinimumHeight(1, 1)
         self.gridLayout.setRowMinimumHeight(2, 1)
@@ -950,25 +950,25 @@ class Ui_Dialog(object):
         self.pushButtonVoltar.setText(_translate("Dialog", "Voltar"))
         self.lineTextNormal.setText(_translate("Dialog", "Normal"))
         self.displayUser.setText(_translate("Dialog", "1234567890"))
-        self.pushButtonDigito8.setText(_translate("Dialog", "8"))
-        self.pushButtonDigito9.setText(_translate("Dialog", "9"))
-        self.pushButtonOP_MUL.setText(_translate("Dialog", "X"))
-        self.pushButtonDOT.setText(_translate("Dialog", "."))
-        self.pushButtonDigito3.setText(_translate("Dialog", "3"))
-        self.pushButtonDigito1.setText(_translate("Dialog", "1"))
-        self.pushButtonDigito5.setText(_translate("Dialog", "5"))
-        self.pushButtonDigito2.setText(_translate("Dialog", "2"))
-        self.pushButtonOP_EQU.setText(_translate("Dialog", "="))
-        self.pushButtonOP_ADD.setText(_translate("Dialog", "+"))
-        self.pushButtonDigito4.setText(_translate("Dialog", "4"))
-        self.pushButtonDigito7.setText(_translate("Dialog", "7"))
-        self.pushButtonDigito6.setText(_translate("Dialog", "6"))
-        self.pushButtonDigito0.setText(_translate("Dialog", "0"))
-        self.pushButtonOP_SUB.setText(_translate("Dialog", "-"))
-        self.pushButtonOP_DIV.setText(_translate("Dialog", "/"))
-        self.pushButtonClear.setText(_translate("Dialog", "C"))
-        self.pushButtonANS.setText(_translate("Dialog", "ANS"))
-        self.pushButtonBACK.setText(_translate("Dialog", "⌫"))
+        self.pushButtonDigitoN8.setText(_translate("Dialog", "8"))
+        self.pushButtonDigitoN9.setText(_translate("Dialog", "9"))
+        self.pushButtonOPN_MUL.setText(_translate("Dialog", "X"))
+        self.pushButtonN_DOT.setText(_translate("Dialog", "."))
+        self.pushButtonDigitoN3.setText(_translate("Dialog", "3"))
+        self.pushButtonDigitoN1.setText(_translate("Dialog", "1"))
+        self.pushButtonDigitoN5.setText(_translate("Dialog", "5"))
+        self.pushButtonDigitoN2.setText(_translate("Dialog", "2"))
+        self.pushButtonOPN_EQU.setText(_translate("Dialog", "="))
+        self.pushButtonOPN_ADD.setText(_translate("Dialog", "+"))
+        self.pushButtonDigitoN4.setText(_translate("Dialog", "4"))
+        self.pushButtonDigitoN7.setText(_translate("Dialog", "7"))
+        self.pushButtonDigitoN6.setText(_translate("Dialog", "6"))
+        self.pushButtonDigitoN0.setText(_translate("Dialog", "0"))
+        self.pushButtonOPN_SUB.setText(_translate("Dialog", "-"))
+        self.pushButtonOPN_DIV.setText(_translate("Dialog", "/"))
+        self.pushButtonN_Clear.setText(_translate("Dialog", "C"))
+        self.pushButtonN_ANS.setText(_translate("Dialog", "ANS"))
+        self.pushButtonN_BACK.setText(_translate("Dialog", "⌫"))
         self.lineTextTitle.setText(_translate("Dialog", "☕ COFFEE CALCULATOR ☕"))
 
 

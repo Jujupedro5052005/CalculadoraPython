@@ -14,37 +14,1339 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(400, 300)
-        self.pushButtonDigito1 = QtWidgets.QPushButton(Dialog)
-        self.pushButtonDigito1.setGeometry(QtCore.QRect(130, 120, 75, 23))
-        self.pushButtonDigito1.setStyleSheet(" background-color: #007BFF;\n"
-" color: white;\n"
-" border: none;\n"
-" border-radius: 10px;\n"
-" padding: 6px 12px;")
-        self.pushButtonDigito1.setObjectName("pushButtonDigito1")
-        self.pushButtonDigito2 = QtWidgets.QPushButton(Dialog)
-        self.pushButtonDigito2.setGeometry(QtCore.QRect(130, 150, 75, 23))
-        self.pushButtonDigito2.setObjectName("pushButtonDigito2")
+        Dialog.resize(432, 395)
+        Dialog.setStyleSheet("QWidget {\n"
+"    background-color: qlineargradient(\n"
+"        x1: 0, y1: 0,\n"
+"        x2: 0, y2: 1,\n"
+"        stop: 0 #f3e7d3,   /* milk foam */\n"
+"        stop: 1 #d9c3a5    /* latte base */\n"
+"    );\n"
+"}")
         self.pushButtonVoltar = QtWidgets.QPushButton(Dialog)
-        self.pushButtonVoltar.setGeometry(QtCore.QRect(10, 270, 75, 23))
+        self.pushButtonVoltar.setGeometry(QtCore.QRect(300, 50, 81, 31))
+        self.pushButtonVoltar.setStyleSheet("QPushButton {\n"
+"\n"
+"    background-color: qlineargradient(\n"
+"        x1: 0, y1: 0,\n"
+"        x2: 0, y2: 1,\n"
+"        stop: 0 #7f8a95,   /* soft steel highlight */\n"
+"        stop: 1 #4f5963    /* deep cool gray */\n"
+"    );\n"
+"\n"
+"    color: #ffffff;\n"
+"\n"
+"    border: 1px solid #6a7682;\n"
+"\n"
+"    border-radius: 9px;\n"
+"\n"
+"    padding: 8px 14px;\n"
+"\n"
+"    font-family: \"Montserrat\", \"Segoe UI Variable\", \"Segoe UI\";\n"
+"    font-size: 15px;\n"
+"    font-weight: 600;\n"
+"\n"
+"    letter-spacing: 0.3px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"\n"
+"    background-color: qlineargradient(\n"
+"        x1: 0, y1: 0,\n"
+"        x2: 0, y2: 1,\n"
+"        stop: 0 #8d98a3,\n"
+"        stop: 1 #5a6671\n"
+"    );\n"
+"\n"
+"    border: 1px solid #7b8793;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: #3e4750;\n"
+"\n"
+"    border: 1px solid #9aa6b2;\n"
+"\n"
+"    padding-top: 9px;\n"
+"    padding-left: 15px;\n"
+"}")
         self.pushButtonVoltar.setObjectName("pushButtonVoltar")
-        self.lineEdit_3 = QtWidgets.QLineEdit(Dialog)
-        self.lineEdit_3.setGeometry(QtCore.QRect(10, 10, 269, 20))
+        self.lineTextTitle = QtWidgets.QLineEdit(Dialog)
+        self.lineTextTitle.setGeometry(QtCore.QRect(70, 10, 301, 31))
         font = QtGui.QFont()
+        font.setFamily("Montserrat")
+        font.setPointSize(-1)
         font.setBold(True)
-        font.setWeight(75)
-        self.lineEdit_3.setFont(font)
-        self.lineEdit_3.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.lineEdit_3.setReadOnly(False)
-        self.lineEdit_3.setObjectName("lineEdit_3")
+        font.setWeight(88)
+        self.lineTextTitle.setFont(font)
+        self.lineTextTitle.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.lineTextTitle.setStyleSheet("QLineEdit {\n"
+"\n"
+"    background-color: transparent;\n"
+"\n"
+"    color: #2f1f17;   /* dark coffee text */\n"
+"\n"
+"    border: none;\n"
+"\n"
+"    padding: 4px 0px;\n"
+"\n"
+"    font-family: \"Montserrat\", \"Segoe UI Variable\", \"Segoe UI\";\n"
+"    font-size: 18px;\n"
+"    font-weight: 700;\n"
+"\n"
+"    letter-spacing: 2px;\n"
+"\n"
+"    qproperty-alignment: \'AlignCenter\';\n"
+"}")
+        self.lineTextTitle.setReadOnly(False)
+        self.lineTextTitle.setObjectName("lineTextTitle")
         self.displayUser = QtWidgets.QLineEdit(Dialog)
-        self.displayUser.setGeometry(QtCore.QRect(110, 80, 113, 20))
+        self.displayUser.setGeometry(QtCore.QRect(40, 90, 341, 41))
+        self.displayUser.setStyleSheet("QLineEdit {\n"
+"\n"
+"    background-color: qlineargradient(\n"
+"        x1: 0, y1: 0,\n"
+"        x2: 0, y2: 1,\n"
+"        stop: 0 #e6e2dc,   /* warm light gray */\n"
+"        stop: 1 #d2ccc4    /* slightly deeper warm gray */\n"
+"    );\n"
+"\n"
+"    color: #1e1b18;      /* dark warm charcoal */\n"
+"\n"
+"    border: 1px solid #b8b1a8;\n"
+"\n"
+"    border-radius: 8px;\n"
+"\n"
+"    padding: 10px 12px;\n"
+"\n"
+"    font-family: \"Consolas\";\n"
+"    font-size: 24px;\n"
+"    font-weight: 500;\n"
+"\n"
+"    letter-spacing: 0.5px;\n"
+"\n"
+"    qproperty-alignment: \'AlignRight | AlignVCenter\';\n"
+"}")
         self.displayUser.setReadOnly(True)
         self.displayUser.setObjectName("displayUser")
-        self.pushButtonDigito3 = QtWidgets.QPushButton(Dialog)
-        self.pushButtonDigito3.setGeometry(QtCore.QRect(130, 180, 75, 23))
-        self.pushButtonDigito3.setObjectName("pushButtonDigito3")
+        self.gridLayoutWidget = QtWidgets.QWidget(Dialog)
+        self.gridLayoutWidget.setGeometry(QtCore.QRect(40, 140, 341, 211))
+        self.gridLayoutWidget.setObjectName("gridLayoutWidget")
+        self.gridLayout_4 = QtWidgets.QGridLayout(self.gridLayoutWidget)
+        self.gridLayout_4.setSizeConstraint(QtWidgets.QLayout.SetDefaultConstraint)
+        self.gridLayout_4.setContentsMargins(0, 0, 0, 0)
+        self.gridLayout_4.setSpacing(4)
+        self.gridLayout_4.setObjectName("gridLayout_4")
+        self.pushButtonC_Clear = QtWidgets.QPushButton(self.gridLayoutWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pushButtonC_Clear.sizePolicy().hasHeightForWidth())
+        self.pushButtonC_Clear.setSizePolicy(sizePolicy)
+        self.pushButtonC_Clear.setStyleSheet("QPushButton {\n"
+"\n"
+"    background-color: qlineargradient(\n"
+"        x1: 0, y1: 0,\n"
+"        x2: 0, y2: 1,\n"
+"        stop: 0 #d07a2f,   /* warm orange highlight */\n"
+"        stop: 1 #9b4f16    /* deep burnt orange */\n"
+"    );\n"
+"\n"
+"    color: #ffffff;\n"
+"\n"
+"    border: 1px solid #b86a22;\n"
+"\n"
+"    border-radius: 9px;\n"
+"\n"
+"    padding: 8px 14px;\n"
+"\n"
+"    font-family: \"Segoe UI Variable\", \"Segoe UI\";\n"
+"    font-size: 15px;\n"
+"    font-weight: 600;\n"
+"    letter-spacing: 0.3px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"\n"
+"    background-color: qlineargradient(\n"
+"        x1: 0, y1: 0,\n"
+"        x2: 0, y2: 1,\n"
+"        stop: 0 #e0893a,\n"
+"        stop: 1 #a8561a\n"
+"    );\n"
+"\n"
+"    border: 1px solid #cc7a2a;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: #7f3e10;\n"
+"\n"
+"    border: 1px solid #f0a24a;\n"
+"\n"
+"    padding-top: 9px;\n"
+"    padding-left: 15px;\n"
+"}")
+        self.pushButtonC_Clear.setObjectName("pushButtonC_Clear")
+        self.gridLayout_4.addWidget(self.pushButtonC_Clear, 0, 0, 1, 1)
+        self.pushButtonDigitoC8 = QtWidgets.QPushButton(self.gridLayoutWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pushButtonDigitoC8.sizePolicy().hasHeightForWidth())
+        self.pushButtonDigitoC8.setSizePolicy(sizePolicy)
+        self.pushButtonDigitoC8.setStyleSheet("QPushButton {\n"
+"\n"
+"    background-color: qlineargradient(\n"
+"        x1: 0, y1: 0,\n"
+"        x2: 0, y2: 1,\n"
+"        stop: 0 #505050,\n"
+"        stop: 1 #2a2a2a\n"
+"    );\n"
+"\n"
+"    color: #ffffff;   /* pure white */\n"
+"\n"
+"    border: 1px solid #6a6a6a;\n"
+"    border-radius: 9px;\n"
+"\n"
+"    padding: 8px 14px;\n"
+"\n"
+"    font-family: \"Segoe UI\";\n"
+"    font-size: 15px;\n"
+"    font-weight: 500;\n"
+"\n"
+"    letter-spacing: 0.4px;\n"
+"}")
+        self.pushButtonDigitoC8.setObjectName("pushButtonDigitoC8")
+        self.gridLayout_4.addWidget(self.pushButtonDigitoC8, 1, 1, 1, 1)
+        self.pushButtonOPC_SIN = QtWidgets.QPushButton(self.gridLayoutWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pushButtonOPC_SIN.sizePolicy().hasHeightForWidth())
+        self.pushButtonOPC_SIN.setSizePolicy(sizePolicy)
+        self.pushButtonOPC_SIN.setStyleSheet("QPushButton {\n"
+"\n"
+"    background-color: qlineargradient(\n"
+"        x1: 0, y1: 0,\n"
+"        x2: 0, y2: 1,\n"
+"        stop: 0 #7a6f66,   /* warm gray-brown highlight */\n"
+"        stop: 1 #4b423c    /* darker warm base */\n"
+"    );\n"
+"\n"
+"    color: #ffffff;\n"
+"\n"
+"    border: 1px solid #8a7f76;\n"
+"\n"
+"    border-radius: 9px;\n"
+"\n"
+"    padding: 8px 14px;\n"
+"\n"
+"    font-family: \"Segoe UI\";\n"
+"    font-size: 15px;\n"
+"    font-weight: 600;\n"
+"\n"
+"    letter-spacing: 0.3px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"\n"
+"    background-color: qlineargradient(\n"
+"        x1: 0, y1: 0,\n"
+"        x2: 0, y2: 1,\n"
+"        stop: 0 #8a7f75,\n"
+"        stop: 1 #5a4f47\n"
+"    );\n"
+"\n"
+"    border: 1px solid #9b8f85;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: #3e3530;\n"
+"\n"
+"    border: 1px solid #b8a89b;\n"
+"\n"
+"    padding-top: 9px;\n"
+"    padding-left: 15px;\n"
+"}")
+        self.pushButtonOPC_SIN.setObjectName("pushButtonOPC_SIN")
+        self.gridLayout_4.addWidget(self.pushButtonOPC_SIN, 1, 8, 1, 1)
+        self.pushButtonDigitoC5 = QtWidgets.QPushButton(self.gridLayoutWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pushButtonDigitoC5.sizePolicy().hasHeightForWidth())
+        self.pushButtonDigitoC5.setSizePolicy(sizePolicy)
+        self.pushButtonDigitoC5.setStyleSheet("QPushButton {\n"
+"\n"
+"    background-color: qlineargradient(\n"
+"        x1: 0, y1: 0,\n"
+"        x2: 0, y2: 1,\n"
+"        stop: 0 #505050,\n"
+"        stop: 1 #2a2a2a\n"
+"    );\n"
+"\n"
+"    color: #ffffff;   /* pure white */\n"
+"\n"
+"    border: 1px solid #6a6a6a;\n"
+"    border-radius: 9px;\n"
+"\n"
+"    padding: 8px 14px;\n"
+"\n"
+"    font-family: \"Segoe UI\";\n"
+"    font-size: 15px;\n"
+"    font-weight: 500;\n"
+"\n"
+"    letter-spacing: 0.4px;\n"
+"}")
+        self.pushButtonDigitoC5.setObjectName("pushButtonDigitoC5")
+        self.gridLayout_4.addWidget(self.pushButtonDigitoC5, 2, 1, 1, 1)
+        self.pushButtonDigitoC7 = QtWidgets.QPushButton(self.gridLayoutWidget)
+        self.pushButtonDigitoC7.setStyleSheet("QPushButton {\n"
+"\n"
+"    background-color: qlineargradient(\n"
+"        x1: 0, y1: 0,\n"
+"        x2: 0, y2: 1,\n"
+"        stop: 0 #505050,\n"
+"        stop: 1 #2a2a2a\n"
+"    );\n"
+"\n"
+"    color: #ffffff;   /* pure white */\n"
+"\n"
+"    border: 1px solid #6a6a6a;\n"
+"    border-radius: 9px;\n"
+"\n"
+"    padding: 8px 14px;\n"
+"\n"
+"    font-family: \"Segoe UI\";\n"
+"    font-size: 15px;\n"
+"    font-weight: 500;\n"
+"\n"
+"    letter-spacing: 0.4px;\n"
+"}")
+        self.pushButtonDigitoC7.setObjectName("pushButtonDigitoC7")
+        self.gridLayout_4.addWidget(self.pushButtonDigitoC7, 1, 0, 1, 1)
+        self.pushButtonOPC_POW = QtWidgets.QPushButton(self.gridLayoutWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pushButtonOPC_POW.sizePolicy().hasHeightForWidth())
+        self.pushButtonOPC_POW.setSizePolicy(sizePolicy)
+        self.pushButtonOPC_POW.setStyleSheet("QPushButton {\n"
+"\n"
+"    background-color: qlineargradient(\n"
+"        x1: 0, y1: 0,\n"
+"        x2: 0, y2: 1,\n"
+"        stop: 0 #7a6f66,   /* warm gray-brown highlight */\n"
+"        stop: 1 #4b423c    /* darker warm base */\n"
+"    );\n"
+"\n"
+"    color: #ffffff;\n"
+"\n"
+"    border: 1px solid #8a7f76;\n"
+"\n"
+"    border-radius: 9px;\n"
+"\n"
+"    padding: 8px 14px;\n"
+"\n"
+"    font-family: \"Segoe UI\";\n"
+"    font-size: 15px;\n"
+"    font-weight: 600;\n"
+"\n"
+"    letter-spacing: 0.3px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"\n"
+"    background-color: qlineargradient(\n"
+"        x1: 0, y1: 0,\n"
+"        x2: 0, y2: 1,\n"
+"        stop: 0 #8a7f75,\n"
+"        stop: 1 #5a4f47\n"
+"    );\n"
+"\n"
+"    border: 1px solid #9b8f85;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: #3e3530;\n"
+"\n"
+"    border: 1px solid #b8a89b;\n"
+"\n"
+"    padding-top: 9px;\n"
+"    padding-left: 15px;\n"
+"}")
+        self.pushButtonOPC_POW.setObjectName("pushButtonOPC_POW")
+        self.gridLayout_4.addWidget(self.pushButtonOPC_POW, 2, 6, 1, 1)
+        self.pushButtonOPC_SUB = QtWidgets.QPushButton(self.gridLayoutWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pushButtonOPC_SUB.sizePolicy().hasHeightForWidth())
+        self.pushButtonOPC_SUB.setSizePolicy(sizePolicy)
+        self.pushButtonOPC_SUB.setStyleSheet("QPushButton {\n"
+"\n"
+"    background-color: qlineargradient(\n"
+"        x1: 0, y1: 0,\n"
+"        x2: 0, y2: 1,\n"
+"        stop: 0 #7a6f66,   /* warm gray-brown highlight */\n"
+"        stop: 1 #4b423c    /* darker warm base */\n"
+"    );\n"
+"\n"
+"    color: #ffffff;\n"
+"\n"
+"    border: 1px solid #8a7f76;\n"
+"\n"
+"    border-radius: 9px;\n"
+"\n"
+"    padding: 8px 14px;\n"
+"\n"
+"    font-family: \"Segoe UI\";\n"
+"    font-size: 15px;\n"
+"    font-weight: 600;\n"
+"\n"
+"    letter-spacing: 0.3px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"\n"
+"    background-color: qlineargradient(\n"
+"        x1: 0, y1: 0,\n"
+"        x2: 0, y2: 1,\n"
+"        stop: 0 #8a7f75,\n"
+"        stop: 1 #5a4f47\n"
+"    );\n"
+"\n"
+"    border: 1px solid #9b8f85;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: #3e3530;\n"
+"\n"
+"    border: 1px solid #b8a89b;\n"
+"\n"
+"    padding-top: 9px;\n"
+"    padding-left: 15px;\n"
+"}")
+        self.pushButtonOPC_SUB.setObjectName("pushButtonOPC_SUB")
+        self.gridLayout_4.addWidget(self.pushButtonOPC_SUB, 3, 5, 1, 1)
+        self.pushButtonOPC_TAN = QtWidgets.QPushButton(self.gridLayoutWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pushButtonOPC_TAN.sizePolicy().hasHeightForWidth())
+        self.pushButtonOPC_TAN.setSizePolicy(sizePolicy)
+        self.pushButtonOPC_TAN.setStyleSheet("QPushButton {\n"
+"\n"
+"    background-color: qlineargradient(\n"
+"        x1: 0, y1: 0,\n"
+"        x2: 0, y2: 1,\n"
+"        stop: 0 #7a6f66,   /* warm gray-brown highlight */\n"
+"        stop: 1 #4b423c    /* darker warm base */\n"
+"    );\n"
+"\n"
+"    color: #ffffff;\n"
+"\n"
+"    border: 1px solid #8a7f76;\n"
+"\n"
+"    border-radius: 9px;\n"
+"\n"
+"    padding: 8px 14px;\n"
+"\n"
+"    font-family: \"Segoe UI\";\n"
+"    font-size: 15px;\n"
+"    font-weight: 600;\n"
+"\n"
+"    letter-spacing: 0.3px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"\n"
+"    background-color: qlineargradient(\n"
+"        x1: 0, y1: 0,\n"
+"        x2: 0, y2: 1,\n"
+"        stop: 0 #8a7f75,\n"
+"        stop: 1 #5a4f47\n"
+"    );\n"
+"\n"
+"    border: 1px solid #9b8f85;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: #3e3530;\n"
+"\n"
+"    border: 1px solid #b8a89b;\n"
+"\n"
+"    padding-top: 9px;\n"
+"    padding-left: 15px;\n"
+"}")
+        self.pushButtonOPC_TAN.setObjectName("pushButtonOPC_TAN")
+        self.gridLayout_4.addWidget(self.pushButtonOPC_TAN, 3, 8, 1, 1)
+        self.pushButtonOPC_EQU = QtWidgets.QPushButton(self.gridLayoutWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pushButtonOPC_EQU.sizePolicy().hasHeightForWidth())
+        self.pushButtonOPC_EQU.setSizePolicy(sizePolicy)
+        self.pushButtonOPC_EQU.setStyleSheet("QPushButton {\n"
+"\n"
+"    background-color: qlineargradient(\n"
+"        x1: 0, y1: 0,\n"
+"        x2: 0, y2: 1,\n"
+"        stop: 0 #7a6f66,   /* warm gray-brown highlight */\n"
+"        stop: 1 #4b423c    /* darker warm base */\n"
+"    );\n"
+"\n"
+"    color: #ffffff;\n"
+"\n"
+"    border: 1px solid #8a7f76;\n"
+"\n"
+"    border-radius: 9px;\n"
+"\n"
+"    padding: 8px 14px;\n"
+"\n"
+"    font-family: \"Segoe UI\";\n"
+"    font-size: 15px;\n"
+"    font-weight: 600;\n"
+"\n"
+"    letter-spacing: 0.3px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"\n"
+"    background-color: qlineargradient(\n"
+"        x1: 0, y1: 0,\n"
+"        x2: 0, y2: 1,\n"
+"        stop: 0 #8a7f75,\n"
+"        stop: 1 #5a4f47\n"
+"    );\n"
+"\n"
+"    border: 1px solid #9b8f85;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: #3e3530;\n"
+"\n"
+"    border: 1px solid #b8a89b;\n"
+"\n"
+"    padding-top: 9px;\n"
+"    padding-left: 15px;\n"
+"}")
+        self.pushButtonOPC_EQU.setObjectName("pushButtonOPC_EQU")
+        self.gridLayout_4.addWidget(self.pushButtonOPC_EQU, 4, 2, 1, 1)
+        self.pushButtonOPC_COS = QtWidgets.QPushButton(self.gridLayoutWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pushButtonOPC_COS.sizePolicy().hasHeightForWidth())
+        self.pushButtonOPC_COS.setSizePolicy(sizePolicy)
+        self.pushButtonOPC_COS.setStyleSheet("QPushButton {\n"
+"\n"
+"    background-color: qlineargradient(\n"
+"        x1: 0, y1: 0,\n"
+"        x2: 0, y2: 1,\n"
+"        stop: 0 #7a6f66,   /* warm gray-brown highlight */\n"
+"        stop: 1 #4b423c    /* darker warm base */\n"
+"    );\n"
+"\n"
+"    color: #ffffff;\n"
+"\n"
+"    border: 1px solid #8a7f76;\n"
+"\n"
+"    border-radius: 9px;\n"
+"\n"
+"    padding: 8px 14px;\n"
+"\n"
+"    font-family: \"Segoe UI\";\n"
+"    font-size: 15px;\n"
+"    font-weight: 600;\n"
+"\n"
+"    letter-spacing: 0.3px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"\n"
+"    background-color: qlineargradient(\n"
+"        x1: 0, y1: 0,\n"
+"        x2: 0, y2: 1,\n"
+"        stop: 0 #8a7f75,\n"
+"        stop: 1 #5a4f47\n"
+"    );\n"
+"\n"
+"    border: 1px solid #9b8f85;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: #3e3530;\n"
+"\n"
+"    border: 1px solid #b8a89b;\n"
+"\n"
+"    padding-top: 9px;\n"
+"    padding-left: 15px;\n"
+"}")
+        self.pushButtonOPC_COS.setObjectName("pushButtonOPC_COS")
+        self.gridLayout_4.addWidget(self.pushButtonOPC_COS, 2, 8, 1, 1)
+        self.pushButtonC_ANS = QtWidgets.QPushButton(self.gridLayoutWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pushButtonC_ANS.sizePolicy().hasHeightForWidth())
+        self.pushButtonC_ANS.setSizePolicy(sizePolicy)
+        self.pushButtonC_ANS.setStyleSheet("QPushButton {\n"
+"\n"
+"    background-color: qlineargradient(\n"
+"        x1: 0, y1: 0,\n"
+"        x2: 0, y2: 1,\n"
+"        stop: 0 #d07a2f,   /* warm orange highlight */\n"
+"        stop: 1 #9b4f16    /* deep burnt orange */\n"
+"    );\n"
+"\n"
+"    color: #ffffff;\n"
+"\n"
+"    border: 1px solid #b86a22;\n"
+"\n"
+"    border-radius: 9px;\n"
+"\n"
+"    padding: 8px 14px;\n"
+"\n"
+"    font-family: \"Segoe UI Variable\", \"Segoe UI\";\n"
+"    font-size: 14px;\n"
+"    font-weight: 600;\n"
+"    letter-spacing: 0.3px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"\n"
+"    background-color: qlineargradient(\n"
+"        x1: 0, y1: 0,\n"
+"        x2: 0, y2: 1,\n"
+"        stop: 0 #e0893a,\n"
+"        stop: 1 #a8561a\n"
+"    );\n"
+"\n"
+"    border: 1px solid #cc7a2a;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: #7f3e10;\n"
+"\n"
+"    border: 1px solid #f0a24a;\n"
+"\n"
+"    padding-top: 9px;\n"
+"    padding-left: 15px;\n"
+"}")
+        self.pushButtonC_ANS.setObjectName("pushButtonC_ANS")
+        self.gridLayout_4.addWidget(self.pushButtonC_ANS, 0, 1, 1, 1)
+        self.pushButtonOPC_ADD = QtWidgets.QPushButton(self.gridLayoutWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pushButtonOPC_ADD.sizePolicy().hasHeightForWidth())
+        self.pushButtonOPC_ADD.setSizePolicy(sizePolicy)
+        self.pushButtonOPC_ADD.setStyleSheet("QPushButton {\n"
+"\n"
+"    background-color: qlineargradient(\n"
+"        x1: 0, y1: 0,\n"
+"        x2: 0, y2: 1,\n"
+"        stop: 0 #7a6f66,   /* warm gray-brown highlight */\n"
+"        stop: 1 #4b423c    /* darker warm base */\n"
+"    );\n"
+"\n"
+"    color: #ffffff;\n"
+"\n"
+"    border: 1px solid #8a7f76;\n"
+"\n"
+"    border-radius: 9px;\n"
+"\n"
+"    padding: 8px 14px;\n"
+"\n"
+"    font-family: \"Segoe UI\";\n"
+"    font-size: 15px;\n"
+"    font-weight: 600;\n"
+"\n"
+"    letter-spacing: 0.3px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"\n"
+"    background-color: qlineargradient(\n"
+"        x1: 0, y1: 0,\n"
+"        x2: 0, y2: 1,\n"
+"        stop: 0 #8a7f75,\n"
+"        stop: 1 #5a4f47\n"
+"    );\n"
+"\n"
+"    border: 1px solid #9b8f85;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: #3e3530;\n"
+"\n"
+"    border: 1px solid #b8a89b;\n"
+"\n"
+"    padding-top: 9px;\n"
+"    padding-left: 15px;\n"
+"}")
+        self.pushButtonOPC_ADD.setObjectName("pushButtonOPC_ADD")
+        self.gridLayout_4.addWidget(self.pushButtonOPC_ADD, 4, 5, 1, 1)
+        self.pushButtonOPC_PI = QtWidgets.QPushButton(self.gridLayoutWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pushButtonOPC_PI.sizePolicy().hasHeightForWidth())
+        self.pushButtonOPC_PI.setSizePolicy(sizePolicy)
+        self.pushButtonOPC_PI.setStyleSheet("QPushButton {\n"
+"\n"
+"    background-color: qlineargradient(\n"
+"        x1: 0, y1: 0,\n"
+"        x2: 0, y2: 1,\n"
+"        stop: 0 #7a6f66,   /* warm gray-brown highlight */\n"
+"        stop: 1 #4b423c    /* darker warm base */\n"
+"    );\n"
+"\n"
+"    color: #ffffff;\n"
+"\n"
+"    border: 1px solid #8a7f76;\n"
+"\n"
+"    border-radius: 9px;\n"
+"\n"
+"    padding: 8px 14px;\n"
+"\n"
+"    font-family: \"Segoe UI\";\n"
+"    font-size: 15px;\n"
+"    font-weight: 600;\n"
+"\n"
+"    letter-spacing: 0.3px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"\n"
+"    background-color: qlineargradient(\n"
+"        x1: 0, y1: 0,\n"
+"        x2: 0, y2: 1,\n"
+"        stop: 0 #8a7f75,\n"
+"        stop: 1 #5a4f47\n"
+"    );\n"
+"\n"
+"    border: 1px solid #9b8f85;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: #3e3530;\n"
+"\n"
+"    border: 1px solid #b8a89b;\n"
+"\n"
+"    padding-top: 9px;\n"
+"    padding-left: 15px;\n"
+"}")
+        self.pushButtonOPC_PI.setObjectName("pushButtonOPC_PI")
+        self.gridLayout_4.addWidget(self.pushButtonOPC_PI, 4, 8, 1, 1)
+        self.pushButtonOPC_MUL = QtWidgets.QPushButton(self.gridLayoutWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pushButtonOPC_MUL.sizePolicy().hasHeightForWidth())
+        self.pushButtonOPC_MUL.setSizePolicy(sizePolicy)
+        self.pushButtonOPC_MUL.setStyleSheet("QPushButton {\n"
+"\n"
+"    background-color: qlineargradient(\n"
+"        x1: 0, y1: 0,\n"
+"        x2: 0, y2: 1,\n"
+"        stop: 0 #7a6f66,   /* warm gray-brown highlight */\n"
+"        stop: 1 #4b423c    /* darker warm base */\n"
+"    );\n"
+"\n"
+"    color: #ffffff;\n"
+"\n"
+"    border: 1px solid #8a7f76;\n"
+"\n"
+"    border-radius: 9px;\n"
+"\n"
+"    padding: 8px 14px;\n"
+"\n"
+"    font-family: \"Segoe UI\";\n"
+"    font-size: 15px;\n"
+"    font-weight: 600;\n"
+"\n"
+"    letter-spacing: 0.3px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"\n"
+"    background-color: qlineargradient(\n"
+"        x1: 0, y1: 0,\n"
+"        x2: 0, y2: 1,\n"
+"        stop: 0 #8a7f75,\n"
+"        stop: 1 #5a4f47\n"
+"    );\n"
+"\n"
+"    border: 1px solid #9b8f85;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: #3e3530;\n"
+"\n"
+"    border: 1px solid #b8a89b;\n"
+"\n"
+"    padding-top: 9px;\n"
+"    padding-left: 15px;\n"
+"}")
+        self.pushButtonOPC_MUL.setObjectName("pushButtonOPC_MUL")
+        self.gridLayout_4.addWidget(self.pushButtonOPC_MUL, 2, 5, 1, 1)
+        self.pushButtonDigitoC4 = QtWidgets.QPushButton(self.gridLayoutWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pushButtonDigitoC4.sizePolicy().hasHeightForWidth())
+        self.pushButtonDigitoC4.setSizePolicy(sizePolicy)
+        self.pushButtonDigitoC4.setStyleSheet("QPushButton {\n"
+"\n"
+"    background-color: qlineargradient(\n"
+"        x1: 0, y1: 0,\n"
+"        x2: 0, y2: 1,\n"
+"        stop: 0 #505050,\n"
+"        stop: 1 #2a2a2a\n"
+"    );\n"
+"\n"
+"    color: #ffffff;   /* pure white */\n"
+"\n"
+"    border: 1px solid #6a6a6a;\n"
+"    border-radius: 9px;\n"
+"\n"
+"    padding: 8px 14px;\n"
+"\n"
+"    font-family: \"Segoe UI\";\n"
+"    font-size: 15px;\n"
+"    font-weight: 500;\n"
+"\n"
+"    letter-spacing: 0.4px;\n"
+"}")
+        self.pushButtonDigitoC4.setObjectName("pushButtonDigitoC4")
+        self.gridLayout_4.addWidget(self.pushButtonDigitoC4, 2, 0, 1, 1)
+        self.pushButtonDigitoC0 = QtWidgets.QPushButton(self.gridLayoutWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pushButtonDigitoC0.sizePolicy().hasHeightForWidth())
+        self.pushButtonDigitoC0.setSizePolicy(sizePolicy)
+        self.pushButtonDigitoC0.setStyleSheet("QPushButton {\n"
+"\n"
+"    background-color: qlineargradient(\n"
+"        x1: 0, y1: 0,\n"
+"        x2: 0, y2: 1,\n"
+"        stop: 0 #505050,\n"
+"        stop: 1 #2a2a2a\n"
+"    );\n"
+"\n"
+"    color: #ffffff;   /* pure white */\n"
+"\n"
+"    border: 1px solid #6a6a6a;\n"
+"    border-radius: 9px;\n"
+"\n"
+"    padding: 8px 14px;\n"
+"\n"
+"    font-family: \"Segoe UI\";\n"
+"    font-size: 15px;\n"
+"    font-weight: 500;\n"
+"\n"
+"    letter-spacing: 0.4px;\n"
+"}")
+        self.pushButtonDigitoC0.setObjectName("pushButtonDigitoC0")
+        self.gridLayout_4.addWidget(self.pushButtonDigitoC0, 4, 0, 1, 1)
+        self.pushButtonDigitoC2 = QtWidgets.QPushButton(self.gridLayoutWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pushButtonDigitoC2.sizePolicy().hasHeightForWidth())
+        self.pushButtonDigitoC2.setSizePolicy(sizePolicy)
+        self.pushButtonDigitoC2.setStyleSheet("QPushButton {\n"
+"\n"
+"    background-color: qlineargradient(\n"
+"        x1: 0, y1: 0,\n"
+"        x2: 0, y2: 1,\n"
+"        stop: 0 #505050,\n"
+"        stop: 1 #2a2a2a\n"
+"    );\n"
+"\n"
+"    color: #ffffff;   /* pure white */\n"
+"\n"
+"    border: 1px solid #6a6a6a;\n"
+"    border-radius: 9px;\n"
+"\n"
+"    padding: 8px 14px;\n"
+"\n"
+"    font-family: \"Segoe UI\";\n"
+"    font-size: 15px;\n"
+"    font-weight: 500;\n"
+"\n"
+"    letter-spacing: 0.4px;\n"
+"}")
+        self.pushButtonDigitoC2.setObjectName("pushButtonDigitoC2")
+        self.gridLayout_4.addWidget(self.pushButtonDigitoC2, 3, 1, 1, 1)
+        self.pushButtonDigitoC1 = QtWidgets.QPushButton(self.gridLayoutWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pushButtonDigitoC1.sizePolicy().hasHeightForWidth())
+        self.pushButtonDigitoC1.setSizePolicy(sizePolicy)
+        self.pushButtonDigitoC1.setStyleSheet("QPushButton {\n"
+"\n"
+"    background-color: qlineargradient(\n"
+"        x1: 0, y1: 0,\n"
+"        x2: 0, y2: 1,\n"
+"        stop: 0 #505050,\n"
+"        stop: 1 #2a2a2a\n"
+"    );\n"
+"\n"
+"    color: #ffffff;   /* pure white */\n"
+"\n"
+"    border: 1px solid #6a6a6a;\n"
+"    border-radius: 9px;\n"
+"\n"
+"    padding: 8px 14px;\n"
+"\n"
+"    font-family: \"Segoe UI\";\n"
+"    font-size: 15px;\n"
+"    font-weight: 500;\n"
+"\n"
+"    letter-spacing: 0.4px;\n"
+"}")
+        self.pushButtonDigitoC1.setObjectName("pushButtonDigitoC1")
+        self.gridLayout_4.addWidget(self.pushButtonDigitoC1, 3, 2, 1, 1)
+        self.pushButtonDigitoC9 = QtWidgets.QPushButton(self.gridLayoutWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pushButtonDigitoC9.sizePolicy().hasHeightForWidth())
+        self.pushButtonDigitoC9.setSizePolicy(sizePolicy)
+        self.pushButtonDigitoC9.setStyleSheet("QPushButton {\n"
+"\n"
+"    background-color: qlineargradient(\n"
+"        x1: 0, y1: 0,\n"
+"        x2: 0, y2: 1,\n"
+"        stop: 0 #505050,\n"
+"        stop: 1 #2a2a2a\n"
+"    );\n"
+"\n"
+"    color: #ffffff;   /* pure white */\n"
+"\n"
+"    border: 1px solid #6a6a6a;\n"
+"    border-radius: 9px;\n"
+"\n"
+"    padding: 8px 14px;\n"
+"\n"
+"    font-family: \"Segoe UI\";\n"
+"    font-size: 15px;\n"
+"    font-weight: 500;\n"
+"\n"
+"    letter-spacing: 0.4px;\n"
+"}")
+        self.pushButtonDigitoC9.setObjectName("pushButtonDigitoC9")
+        self.gridLayout_4.addWidget(self.pushButtonDigitoC9, 1, 2, 1, 1)
+        self.pushButtonC_DOT = QtWidgets.QPushButton(self.gridLayoutWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pushButtonC_DOT.sizePolicy().hasHeightForWidth())
+        self.pushButtonC_DOT.setSizePolicy(sizePolicy)
+        self.pushButtonC_DOT.setStyleSheet("QPushButton {\n"
+"\n"
+"    background-color: qlineargradient(\n"
+"        x1: 0, y1: 0,\n"
+"        x2: 0, y2: 1,\n"
+"        stop: 0 #505050,\n"
+"        stop: 1 #2a2a2a\n"
+"    );\n"
+"\n"
+"    color: #ffffff;   /* pure white */\n"
+"\n"
+"    border: 1px solid #6a6a6a;\n"
+"    border-radius: 9px;\n"
+"\n"
+"    padding: 8px 14px;\n"
+"\n"
+"    font-family: \"Segoe UI\";\n"
+"    font-size: 15px;\n"
+"    font-weight: 500;\n"
+"\n"
+"    letter-spacing: 0.4px;\n"
+"}")
+        self.pushButtonC_DOT.setObjectName("pushButtonC_DOT")
+        self.gridLayout_4.addWidget(self.pushButtonC_DOT, 4, 1, 1, 1)
+        self.pushButtonDigitoC6 = QtWidgets.QPushButton(self.gridLayoutWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pushButtonDigitoC6.sizePolicy().hasHeightForWidth())
+        self.pushButtonDigitoC6.setSizePolicy(sizePolicy)
+        self.pushButtonDigitoC6.setStyleSheet("QPushButton {\n"
+"\n"
+"    background-color: qlineargradient(\n"
+"        x1: 0, y1: 0,\n"
+"        x2: 0, y2: 1,\n"
+"        stop: 0 #505050,\n"
+"        stop: 1 #2a2a2a\n"
+"    );\n"
+"\n"
+"    color: #ffffff;   /* pure white */\n"
+"\n"
+"    border: 1px solid #6a6a6a;\n"
+"    border-radius: 9px;\n"
+"\n"
+"    padding: 8px 14px;\n"
+"\n"
+"    font-family: \"Segoe UI\";\n"
+"    font-size: 15px;\n"
+"    font-weight: 500;\n"
+"\n"
+"    letter-spacing: 0.4px;\n"
+"}")
+        self.pushButtonDigitoC6.setObjectName("pushButtonDigitoC6")
+        self.gridLayout_4.addWidget(self.pushButtonDigitoC6, 2, 2, 1, 1)
+        self.pushButtonC_BACK = QtWidgets.QPushButton(self.gridLayoutWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pushButtonC_BACK.sizePolicy().hasHeightForWidth())
+        self.pushButtonC_BACK.setSizePolicy(sizePolicy)
+        self.pushButtonC_BACK.setStyleSheet("QPushButton {\n"
+"\n"
+"    background-color: qlineargradient(\n"
+"        x1: 0, y1: 0,\n"
+"        x2: 0, y2: 1,\n"
+"        stop: 0 #7f8a95,\n"
+"        stop: 1 #4f5963\n"
+"    );\n"
+"\n"
+"    color: #ffffff;\n"
+"\n"
+"    border: 1px solid #6a7682;\n"
+"\n"
+"    border-radius: 9px;\n"
+"\n"
+"    padding: 8px 14px;\n"
+"\n"
+"    font-family: \"Montserrat\", \"Segoe UI Variable\", \"Segoe UI\";\n"
+"    font-size: 15px;\n"
+"    font-weight: 600;\n"
+"\n"
+"    letter-spacing: 0.3px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"\n"
+"    background-color: qlineargradient(\n"
+"        x1: 0, y1: 0,\n"
+"        x2: 0, y2: 1,\n"
+"        stop: 0 #8d98a3,\n"
+"        stop: 1 #5a6671\n"
+"    );\n"
+"\n"
+"    border: 1px solid #7b8793;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: #3e4750;\n"
+"\n"
+"    border: 1px solid #9aa6b2;\n"
+"\n"
+"    padding-top: 9px;\n"
+"    padding-left: 15px;\n"
+"}")
+        self.pushButtonC_BACK.setObjectName("pushButtonC_BACK")
+        self.gridLayout_4.addWidget(self.pushButtonC_BACK, 0, 8, 1, 1)
+        self.pushButtonDigitoC3 = QtWidgets.QPushButton(self.gridLayoutWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pushButtonDigitoC3.sizePolicy().hasHeightForWidth())
+        self.pushButtonDigitoC3.setSizePolicy(sizePolicy)
+        self.pushButtonDigitoC3.setStyleSheet("QPushButton {\n"
+"\n"
+"    background-color: qlineargradient(\n"
+"        x1: 0, y1: 0,\n"
+"        x2: 0, y2: 1,\n"
+"        stop: 0 #505050,\n"
+"        stop: 1 #2a2a2a\n"
+"    );\n"
+"\n"
+"    color: #ffffff;   /* pure white */\n"
+"\n"
+"    border: 1px solid #6a6a6a;\n"
+"    border-radius: 9px;\n"
+"\n"
+"    padding: 8px 14px;\n"
+"\n"
+"    font-family: \"Segoe UI\";\n"
+"    font-size: 15px;\n"
+"    font-weight: 500;\n"
+"\n"
+"    letter-spacing: 0.4px;\n"
+"}")
+        self.pushButtonDigitoC3.setObjectName("pushButtonDigitoC3")
+        self.gridLayout_4.addWidget(self.pushButtonDigitoC3, 3, 0, 1, 1)
+        self.pushButtonOPC_SQRT = QtWidgets.QPushButton(self.gridLayoutWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pushButtonOPC_SQRT.sizePolicy().hasHeightForWidth())
+        self.pushButtonOPC_SQRT.setSizePolicy(sizePolicy)
+        self.pushButtonOPC_SQRT.setStyleSheet("QPushButton {\n"
+"\n"
+"    background-color: qlineargradient(\n"
+"        x1: 0, y1: 0,\n"
+"        x2: 0, y2: 1,\n"
+"        stop: 0 #7a6f66,   /* warm gray-brown highlight */\n"
+"        stop: 1 #4b423c    /* darker warm base */\n"
+"    );\n"
+"\n"
+"    color: #ffffff;\n"
+"\n"
+"    border: 1px solid #8a7f76;\n"
+"\n"
+"    border-radius: 9px;\n"
+"\n"
+"    padding: 8px 14px;\n"
+"\n"
+"    font-family: \"Segoe UI\";\n"
+"    font-size: 15px;\n"
+"    font-weight: 600;\n"
+"\n"
+"    letter-spacing: 0.3px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"\n"
+"    background-color: qlineargradient(\n"
+"        x1: 0, y1: 0,\n"
+"        x2: 0, y2: 1,\n"
+"        stop: 0 #8a7f75,\n"
+"        stop: 1 #5a4f47\n"
+"    );\n"
+"\n"
+"    border: 1px solid #9b8f85;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: #3e3530;\n"
+"\n"
+"    border: 1px solid #b8a89b;\n"
+"\n"
+"    padding-top: 9px;\n"
+"    padding-left: 15px;\n"
+"}")
+        self.pushButtonOPC_SQRT.setObjectName("pushButtonOPC_SQRT")
+        self.gridLayout_4.addWidget(self.pushButtonOPC_SQRT, 1, 6, 1, 1)
+        self.pushButtonOPC_INV = QtWidgets.QPushButton(self.gridLayoutWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pushButtonOPC_INV.sizePolicy().hasHeightForWidth())
+        self.pushButtonOPC_INV.setSizePolicy(sizePolicy)
+        self.pushButtonOPC_INV.setStyleSheet("QPushButton {\n"
+"\n"
+"    background-color: qlineargradient(\n"
+"        x1: 0, y1: 0,\n"
+"        x2: 0, y2: 1,\n"
+"        stop: 0 #7a6f66,   /* warm gray-brown highlight */\n"
+"        stop: 1 #4b423c    /* darker warm base */\n"
+"    );\n"
+"\n"
+"    color: #ffffff;\n"
+"\n"
+"    border: 1px solid #8a7f76;\n"
+"\n"
+"    border-radius: 9px;\n"
+"\n"
+"    padding: 8px 14px;\n"
+"\n"
+"    font-family: \"Segoe UI\";\n"
+"    font-size: 15px;\n"
+"    font-weight: 600;\n"
+"\n"
+"    letter-spacing: 0.3px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"\n"
+"    background-color: qlineargradient(\n"
+"        x1: 0, y1: 0,\n"
+"        x2: 0, y2: 1,\n"
+"        stop: 0 #8a7f75,\n"
+"        stop: 1 #5a4f47\n"
+"    );\n"
+"\n"
+"    border: 1px solid #9b8f85;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: #3e3530;\n"
+"\n"
+"    border: 1px solid #b8a89b;\n"
+"\n"
+"    padding-top: 9px;\n"
+"    padding-left: 15px;\n"
+"}")
+        self.pushButtonOPC_INV.setObjectName("pushButtonOPC_INV")
+        self.gridLayout_4.addWidget(self.pushButtonOPC_INV, 4, 6, 1, 1)
+        self.pushButtonOPC_PER = QtWidgets.QPushButton(self.gridLayoutWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pushButtonOPC_PER.sizePolicy().hasHeightForWidth())
+        self.pushButtonOPC_PER.setSizePolicy(sizePolicy)
+        self.pushButtonOPC_PER.setStyleSheet("QPushButton {\n"
+"\n"
+"    background-color: qlineargradient(\n"
+"        x1: 0, y1: 0,\n"
+"        x2: 0, y2: 1,\n"
+"        stop: 0 #7a6f66,   /* warm gray-brown highlight */\n"
+"        stop: 1 #4b423c    /* darker warm base */\n"
+"    );\n"
+"\n"
+"    color: #ffffff;\n"
+"\n"
+"    border: 1px solid #8a7f76;\n"
+"\n"
+"    border-radius: 9px;\n"
+"\n"
+"    padding: 8px 14px;\n"
+"\n"
+"    font-family: \"Segoe UI\";\n"
+"    font-size: 15px;\n"
+"    font-weight: 600;\n"
+"\n"
+"    letter-spacing: 0.3px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"\n"
+"    background-color: qlineargradient(\n"
+"        x1: 0, y1: 0,\n"
+"        x2: 0, y2: 1,\n"
+"        stop: 0 #8a7f75,\n"
+"        stop: 1 #5a4f47\n"
+"    );\n"
+"\n"
+"    border: 1px solid #9b8f85;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: #3e3530;\n"
+"\n"
+"    border: 1px solid #b8a89b;\n"
+"\n"
+"    padding-top: 9px;\n"
+"    padding-left: 15px;\n"
+"}")
+        self.pushButtonOPC_PER.setObjectName("pushButtonOPC_PER")
+        self.gridLayout_4.addWidget(self.pushButtonOPC_PER, 3, 6, 1, 1)
+        self.pushButtonOPC_DIV = QtWidgets.QPushButton(self.gridLayoutWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pushButtonOPC_DIV.sizePolicy().hasHeightForWidth())
+        self.pushButtonOPC_DIV.setSizePolicy(sizePolicy)
+        self.pushButtonOPC_DIV.setStyleSheet("QPushButton {\n"
+"\n"
+"    background-color: qlineargradient(\n"
+"        x1: 0, y1: 0,\n"
+"        x2: 0, y2: 1,\n"
+"        stop: 0 #7a6f66,   /* warm gray-brown highlight */\n"
+"        stop: 1 #4b423c    /* darker warm base */\n"
+"    );\n"
+"\n"
+"    color: #ffffff;\n"
+"\n"
+"    border: 1px solid #8a7f76;\n"
+"\n"
+"    border-radius: 9px;\n"
+"\n"
+"    padding: 8px 14px;\n"
+"\n"
+"    font-family: \"Segoe UI\";\n"
+"    font-size: 15px;\n"
+"    font-weight: 600;\n"
+"\n"
+"    letter-spacing: 0.3px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"\n"
+"    background-color: qlineargradient(\n"
+"        x1: 0, y1: 0,\n"
+"        x2: 0, y2: 1,\n"
+"        stop: 0 #8a7f75,\n"
+"        stop: 1 #5a4f47\n"
+"    );\n"
+"\n"
+"    border: 1px solid #9b8f85;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: #3e3530;\n"
+"\n"
+"    border: 1px solid #b8a89b;\n"
+"\n"
+"    padding-top: 9px;\n"
+"    padding-left: 15px;\n"
+"}")
+        self.pushButtonOPC_DIV.setObjectName("pushButtonOPC_DIV")
+        self.gridLayout_4.addWidget(self.pushButtonOPC_DIV, 1, 5, 1, 1)
+        self.gridLayout_4.setColumnStretch(0, 1)
+        self.gridLayout_4.setRowStretch(0, 1)
+        self.lineTextNormal = QtWidgets.QLineEdit(Dialog)
+        self.lineTextNormal.setEnabled(False)
+        self.lineTextNormal.setGeometry(QtCore.QRect(40, 50, 121, 31))
+        font = QtGui.QFont()
+        font.setFamily("Montserrat")
+        font.setPointSize(-1)
+        font.setBold(True)
+        font.setWeight(75)
+        self.lineTextNormal.setFont(font)
+        self.lineTextNormal.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.lineTextNormal.setStyleSheet("QLineEdit {\n"
+"\n"
+"    background-color: qlineargradient(\n"
+"        x1: 0, y1: 0,\n"
+"        x2: 0, y2: 1,\n"
+"        stop: 0 #d07a2f,\n"
+"        stop: 1 #9b4f16\n"
+"    );\n"
+"\n"
+"    color: #ffffff;\n"
+"\n"
+"    border: 1px solid #b86a22;\n"
+"\n"
+"    border-radius: 8px;\n"
+"\n"
+"    padding: 6px 10px;\n"
+"\n"
+"     font-family: \"Montserrat\", \"Segoe UI Variable\", \"Segoe UI\";\n"
+"    font-size: 15px;\n"
+"    font-weight: 600;\n"
+"\n"
+"    letter-spacing: 1.2px;\n"
+"\n"
+"    qproperty-alignment: \'AlignCenter\';\n"
+"}")
+        self.lineTextNormal.setReadOnly(False)
+        self.lineTextNormal.setObjectName("lineTextNormal")
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
@@ -52,11 +1354,37 @@ class Ui_Dialog(object):
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
-        self.pushButtonDigito1.setText(_translate("Dialog", "1"))
-        self.pushButtonDigito2.setText(_translate("Dialog", "2"))
         self.pushButtonVoltar.setText(_translate("Dialog", "Voltar"))
-        self.lineEdit_3.setText(_translate("Dialog", "Cientifica"))
-        self.pushButtonDigito3.setText(_translate("Dialog", "3"))
+        self.lineTextTitle.setText(_translate("Dialog", "☕ COFFEE CALCULATOR ☕"))
+        self.displayUser.setText(_translate("Dialog", "1234567890"))
+        self.pushButtonC_Clear.setText(_translate("Dialog", "C"))
+        self.pushButtonDigitoC8.setText(_translate("Dialog", "8"))
+        self.pushButtonOPC_SIN.setText(_translate("Dialog", "sin"))
+        self.pushButtonDigitoC5.setText(_translate("Dialog", "5"))
+        self.pushButtonDigitoC7.setText(_translate("Dialog", "7"))
+        self.pushButtonOPC_POW.setText(_translate("Dialog", "x²"))
+        self.pushButtonOPC_SUB.setText(_translate("Dialog", "-"))
+        self.pushButtonOPC_TAN.setText(_translate("Dialog", "tan"))
+        self.pushButtonOPC_EQU.setText(_translate("Dialog", "="))
+        self.pushButtonOPC_COS.setText(_translate("Dialog", "cos"))
+        self.pushButtonC_ANS.setText(_translate("Dialog", "ANS"))
+        self.pushButtonOPC_ADD.setText(_translate("Dialog", "+"))
+        self.pushButtonOPC_PI.setText(_translate("Dialog", " π"))
+        self.pushButtonOPC_MUL.setText(_translate("Dialog", "X"))
+        self.pushButtonDigitoC4.setText(_translate("Dialog", "4"))
+        self.pushButtonDigitoC0.setText(_translate("Dialog", "0"))
+        self.pushButtonDigitoC2.setText(_translate("Dialog", "2"))
+        self.pushButtonDigitoC1.setText(_translate("Dialog", "1"))
+        self.pushButtonDigitoC9.setText(_translate("Dialog", "9"))
+        self.pushButtonC_DOT.setText(_translate("Dialog", "."))
+        self.pushButtonDigitoC6.setText(_translate("Dialog", "6"))
+        self.pushButtonC_BACK.setText(_translate("Dialog", "⌫"))
+        self.pushButtonDigitoC3.setText(_translate("Dialog", "3"))
+        self.pushButtonOPC_SQRT.setText(_translate("Dialog", "√"))
+        self.pushButtonOPC_INV.setText(_translate("Dialog", "1/x"))
+        self.pushButtonOPC_PER.setText(_translate("Dialog", "%"))
+        self.pushButtonOPC_DIV.setText(_translate("Dialog", "/"))
+        self.lineTextNormal.setText(_translate("Dialog", "Científica"))
 
 
 if __name__ == "__main__":

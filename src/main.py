@@ -19,10 +19,18 @@ class HandlerQT(QtCore.QObject):
         self.ui.setupUi(self.Dialog)
         # Variável que recebe as entradas do usuário
         self.user_input = "0"
+        # Variáveis que guardam números e operação da calculadora NORMAL
+        self.last_num = 0
+        self.now_num = 0
+        self.operacao = ""
 
     def display_update(self):
         telas[1].ui.displayUser.setText(self.user_input)
         telas[2].ui.displayUser.setText(self.user_input)
+
+    def add(self):
+        pass
+
 
     def btn_push_callback(self, telas):
         sender = self.Dialog.sender()
@@ -55,15 +63,29 @@ class HandlerQT(QtCore.QObject):
         elif sender.objectName() == "pushButtonDOT":
             if not("." in self.user_input):
                 self.user_input += "."
-        
+
         # Atualiza texto de entrada do usuário
         elif "pushButtonDigito" in sender.objectName():
             self.user_input += sender.text()
-            #telas[2].ui.lineEditUsuario.setText(sender.text())
+        
+        # Atualiza texto de entrada do usuário
+        """if any(op in self.user_input for op in ["+", "-", "x", "/"]):
+            print("oi")
+            self.user_input = sender.text()"""
 
-        # Processa a seleção de operação
-        elif "pushButtonOP" in sender.objectName():
-            self.user_input += sender.text()
+        # Processa a seleção de operação da calculadora NORMAL
+        # (já apresenta o resultado após a operação)
+        if "pushButtonOPN" in sender.objectName():
+            if   "ADD" in sender.objectName(): self.operacao = "+"
+            elif "SUB" in sender.objectName(): self.operacao = "-"
+            elif "MUL" in sender.objectName(): self.operacao = "x"
+            elif "DIV" in sender.objectName(): self.operacao = "/"
+            
+            if "EQU" in sender.objectName():
+                self.now_num = self.user_input
+            else:
+                self.last_num = self.user_input
+                self.user_input += self.operacao
 
         self.display_update()
 

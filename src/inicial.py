@@ -14,31 +14,183 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(399, 300)
+        Dialog.resize(334, 164)
+        Dialog.setStyleSheet("QWidget {\n"
+"    background-color: qlineargradient(\n"
+"        x1: 0, y1: 0,\n"
+"        x2: 0, y2: 1,\n"
+"        stop: 0 #f3e7d3,   /* milk foam */\n"
+"        stop: 1 #d9c3a5    /* latte base */\n"
+"    );\n"
+"}")
         self.verticalLayoutWidget = QtWidgets.QWidget(Dialog)
-        self.verticalLayoutWidget.setGeometry(QtCore.QRect(80, 100, 271, 81))
+        self.verticalLayoutWidget.setGeometry(QtCore.QRect(40, 60, 271, 86))
         self.verticalLayoutWidget.setObjectName("verticalLayoutWidget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.verticalLayoutWidget)
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout.setObjectName("verticalLayout")
         self.lineEdit = QtWidgets.QLineEdit(self.verticalLayoutWidget)
         font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
+        font.setFamily("Consolas")
+        font.setPointSize(-1)
+        font.setBold(False)
+        font.setWeight(56)
         self.lineEdit.setFont(font)
         self.lineEdit.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.lineEdit.setStyleSheet("QLineEdit {\n"
+"\n"
+"    background-color: qlineargradient(\n"
+"        x1: 0, y1: 0,\n"
+"        x2: 0, y2: 1,\n"
+"        stop: 0 #e6e2dc,   /* warm light gray */\n"
+"        stop: 1 #d2ccc4    /* slightly deeper warm gray */\n"
+"    );\n"
+"\n"
+"    color: #1e1b18;      /* dark warm charcoal */\n"
+"\n"
+"    border: 1px solid #b8b1a8;\n"
+"\n"
+"    border-radius: 8px;\n"
+"\n"
+"    padding: 10px 12px;\n"
+"\n"
+"    font-family: \"Consolas\";\n"
+"    font-size: 10px;\n"
+"    font-weight: 450;\n"
+"\n"
+"    letter-spacing: 0.5px;\n"
+"\n"
+"    qproperty-alignment: \'AlignRight | AlignVCenter\';\n"
+"}")
         self.lineEdit.setReadOnly(False)
         self.lineEdit.setObjectName("lineEdit")
         self.verticalLayout.addWidget(self.lineEdit)
         self.horizontalLayout = QtWidgets.QHBoxLayout()
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.pushButtonNormal = QtWidgets.QPushButton(self.verticalLayoutWidget)
+        self.pushButtonNormal.setStyleSheet("QPushButton {\n"
+"\n"
+"    background-color: qlineargradient(\n"
+"        x1: 0, y1: 0,\n"
+"        x2: 0, y2: 1,\n"
+"        stop: 0 #d07a2f,   /* warm orange highlight */\n"
+"        stop: 1 #9b4f16    /* deep burnt orange */\n"
+"    );\n"
+"\n"
+"    color: #ffffff;\n"
+"\n"
+"    border: 1px solid #b86a22;\n"
+"\n"
+"    border-radius: 9px;\n"
+"\n"
+"    padding: 8px 14px;\n"
+"\n"
+"    font-family: \"Segoe UI Variable\", \"Segoe UI\";\n"
+"    font-size: 15px;\n"
+"    font-weight: 600;\n"
+"    letter-spacing: 0.3px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"\n"
+"    background-color: qlineargradient(\n"
+"        x1: 0, y1: 0,\n"
+"        x2: 0, y2: 1,\n"
+"        stop: 0 #e0893a,\n"
+"        stop: 1 #a8561a\n"
+"    );\n"
+"\n"
+"    border: 1px solid #cc7a2a;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: #7f3e10;\n"
+"\n"
+"    border: 1px solid #f0a24a;\n"
+"\n"
+"    padding-top: 9px;\n"
+"    padding-left: 15px;\n"
+"}")
         self.pushButtonNormal.setObjectName("pushButtonNormal")
         self.horizontalLayout.addWidget(self.pushButtonNormal)
         self.pushButtonCientifica = QtWidgets.QPushButton(self.verticalLayoutWidget)
+        self.pushButtonCientifica.setStyleSheet("QPushButton {\n"
+"\n"
+"    background-color: qlineargradient(\n"
+"        x1: 0, y1: 0,\n"
+"        x2: 0, y2: 1,\n"
+"        stop: 0 #d07a2f,   /* warm orange highlight */\n"
+"        stop: 1 #9b4f16    /* deep burnt orange */\n"
+"    );\n"
+"\n"
+"    color: #ffffff;\n"
+"\n"
+"    border: 1px solid #b86a22;\n"
+"\n"
+"    border-radius: 9px;\n"
+"\n"
+"    padding: 8px 14px;\n"
+"\n"
+"    font-family: \"Segoe UI Variable\", \"Segoe UI\";\n"
+"    font-size: 15px;\n"
+"    font-weight: 600;\n"
+"    letter-spacing: 0.3px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"\n"
+"    background-color: qlineargradient(\n"
+"        x1: 0, y1: 0,\n"
+"        x2: 0, y2: 1,\n"
+"        stop: 0 #e0893a,\n"
+"        stop: 1 #a8561a\n"
+"    );\n"
+"\n"
+"    border: 1px solid #cc7a2a;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: #7f3e10;\n"
+"\n"
+"    border: 1px solid #f0a24a;\n"
+"\n"
+"    padding-top: 9px;\n"
+"    padding-left: 15px;\n"
+"}")
         self.pushButtonCientifica.setObjectName("pushButtonCientifica")
         self.horizontalLayout.addWidget(self.pushButtonCientifica)
         self.verticalLayout.addLayout(self.horizontalLayout)
+        self.lineTextTitle_2 = QtWidgets.QLineEdit(Dialog)
+        self.lineTextTitle_2.setGeometry(QtCore.QRect(20, 10, 301, 31))
+        font = QtGui.QFont()
+        font.setFamily("Montserrat")
+        font.setPointSize(-1)
+        font.setBold(True)
+        font.setWeight(88)
+        self.lineTextTitle_2.setFont(font)
+        self.lineTextTitle_2.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.lineTextTitle_2.setStyleSheet("QLineEdit {\n"
+"\n"
+"    background-color: transparent;\n"
+"\n"
+"    color: #2f1f17;   /* dark coffee text */\n"
+"\n"
+"    border: none;\n"
+"\n"
+"    padding: 4px 0px;\n"
+"\n"
+"    font-family: \"Montserrat\", \"Segoe UI Variable\", \"Segoe UI\";\n"
+"    font-size: 18px;\n"
+"    font-weight: 700;\n"
+"\n"
+"    letter-spacing: 2px;\n"
+"\n"
+"    qproperty-alignment: \'AlignCenter\';\n"
+"}")
+        self.lineTextTitle_2.setReadOnly(False)
+        self.lineTextTitle_2.setObjectName("lineTextTitle_2")
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
@@ -49,6 +201,7 @@ class Ui_Dialog(object):
         self.lineEdit.setText(_translate("Dialog", "Selecione o modo de operação da calculadora"))
         self.pushButtonNormal.setText(_translate("Dialog", "Normal"))
         self.pushButtonCientifica.setText(_translate("Dialog", "Cientifica"))
+        self.lineTextTitle_2.setText(_translate("Dialog", "☕ COFFEE CALCULATOR ☕"))
 
 
 if __name__ == "__main__":

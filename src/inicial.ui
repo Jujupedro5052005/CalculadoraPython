@@ -6,20 +6,30 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>399</width>
-    <height>300</height>
+    <width>334</width>
+    <height>164</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+    background-color: qlineargradient(
+        x1: 0, y1: 0,
+        x2: 0, y2: 1,
+        stop: 0 #f3e7d3,   /* milk foam */
+        stop: 1 #d9c3a5    /* latte base */
+    );
+}</string>
+  </property>
   <widget class="QWidget" name="verticalLayoutWidget">
    <property name="geometry">
     <rect>
-     <x>80</x>
-     <y>100</y>
+     <x>40</x>
+     <y>60</y>
      <width>271</width>
-     <height>81</height>
+     <height>86</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -27,12 +37,41 @@
      <widget class="QLineEdit" name="lineEdit">
       <property name="font">
        <font>
-        <weight>75</weight>
-        <bold>true</bold>
+        <family>Consolas</family>
+        <pointsize>-1</pointsize>
+        <weight>56</weight>
+        <bold>false</bold>
        </font>
       </property>
       <property name="layoutDirection">
        <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+
+    background-color: qlineargradient(
+        x1: 0, y1: 0,
+        x2: 0, y2: 1,
+        stop: 0 #e6e2dc,   /* warm light gray */
+        stop: 1 #d2ccc4    /* slightly deeper warm gray */
+    );
+
+    color: #1e1b18;      /* dark warm charcoal */
+
+    border: 1px solid #b8b1a8;
+
+    border-radius: 8px;
+
+    padding: 10px 12px;
+
+    font-family: &quot;Consolas&quot;;
+    font-size: 10px;
+    font-weight: 450;
+
+    letter-spacing: 0.5px;
+
+    qproperty-alignment: 'AlignRight | AlignVCenter';
+}</string>
       </property>
       <property name="text">
        <string>Selecione o modo de operação da calculadora</string>
@@ -46,6 +85,52 @@
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
        <widget class="QPushButton" name="pushButtonNormal">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+
+    background-color: qlineargradient(
+        x1: 0, y1: 0,
+        x2: 0, y2: 1,
+        stop: 0 #d07a2f,   /* warm orange highlight */
+        stop: 1 #9b4f16    /* deep burnt orange */
+    );
+
+    color: #ffffff;
+
+    border: 1px solid #b86a22;
+
+    border-radius: 9px;
+
+    padding: 8px 14px;
+
+    font-family: &quot;Segoe UI Variable&quot;, &quot;Segoe UI&quot;;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+QPushButton:hover {
+
+    background-color: qlineargradient(
+        x1: 0, y1: 0,
+        x2: 0, y2: 1,
+        stop: 0 #e0893a,
+        stop: 1 #a8561a
+    );
+
+    border: 1px solid #cc7a2a;
+}
+
+QPushButton:pressed {
+
+    background-color: #7f3e10;
+
+    border: 1px solid #f0a24a;
+
+    padding-top: 9px;
+    padding-left: 15px;
+}</string>
+        </property>
         <property name="text">
          <string>Normal</string>
         </property>
@@ -53,6 +138,52 @@
       </item>
       <item>
        <widget class="QPushButton" name="pushButtonCientifica">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+
+    background-color: qlineargradient(
+        x1: 0, y1: 0,
+        x2: 0, y2: 1,
+        stop: 0 #d07a2f,   /* warm orange highlight */
+        stop: 1 #9b4f16    /* deep burnt orange */
+    );
+
+    color: #ffffff;
+
+    border: 1px solid #b86a22;
+
+    border-radius: 9px;
+
+    padding: 8px 14px;
+
+    font-family: &quot;Segoe UI Variable&quot;, &quot;Segoe UI&quot;;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+QPushButton:hover {
+
+    background-color: qlineargradient(
+        x1: 0, y1: 0,
+        x2: 0, y2: 1,
+        stop: 0 #e0893a,
+        stop: 1 #a8561a
+    );
+
+    border: 1px solid #cc7a2a;
+}
+
+QPushButton:pressed {
+
+    background-color: #7f3e10;
+
+    border: 1px solid #f0a24a;
+
+    padding-top: 9px;
+    padding-left: 15px;
+}</string>
+        </property>
         <property name="text">
          <string>Cientifica</string>
         </property>
@@ -61,6 +192,53 @@
      </layout>
     </item>
    </layout>
+  </widget>
+  <widget class="QLineEdit" name="lineTextTitle_2">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>301</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Montserrat</family>
+     <pointsize>-1</pointsize>
+     <weight>88</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit {
+
+    background-color: transparent;
+
+    color: #2f1f17;   /* dark coffee text */
+
+    border: none;
+
+    padding: 4px 0px;
+
+    font-family: &quot;Montserrat&quot;, &quot;Segoe UI Variable&quot;, &quot;Segoe UI&quot;;
+    font-size: 18px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    qproperty-alignment: 'AlignCenter';
+}</string>
+   </property>
+   <property name="text">
+    <string>☕ COFFEE CALCULATOR ☕</string>
+   </property>
+   <property name="readOnly">
+    <bool>false</bool>
+   </property>
   </widget>
  </widget>
  <resources/>

@@ -206,7 +206,7 @@ QPushButton:pressed {
      <number>4</number>
     </property>
     <item row="1" column="1">
-     <widget class="QPushButton" name="pushButtonDigito8">
+     <widget class="QPushButton" name="pushButtonDigitoN8">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
         <horstretch>0</horstretch>
@@ -243,7 +243,7 @@ QPushButton:pressed {
      </widget>
     </item>
     <item row="1" column="2">
-     <widget class="QPushButton" name="pushButtonDigito9">
+     <widget class="QPushButton" name="pushButtonDigitoN9">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
         <horstretch>0</horstretch>
@@ -280,7 +280,7 @@ QPushButton:pressed {
      </widget>
     </item>
     <item row="2" column="3">
-     <widget class="QPushButton" name="pushButtonOP_MUL">
+     <widget class="QPushButton" name="pushButtonOPN_MUL">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
         <horstretch>0</horstretch>
@@ -340,7 +340,7 @@ QPushButton:pressed {
      </widget>
     </item>
     <item row="4" column="1">
-     <widget class="QPushButton" name="pushButtonDOT">
+     <widget class="QPushButton" name="pushButtonN_DOT">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
         <horstretch>0</horstretch>
@@ -377,7 +377,7 @@ QPushButton:pressed {
      </widget>
     </item>
     <item row="3" column="0">
-     <widget class="QPushButton" name="pushButtonDigito3">
+     <widget class="QPushButton" name="pushButtonDigitoN3">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
         <horstretch>0</horstretch>
@@ -414,7 +414,7 @@ QPushButton:pressed {
      </widget>
     </item>
     <item row="3" column="2">
-     <widget class="QPushButton" name="pushButtonDigito1">
+     <widget class="QPushButton" name="pushButtonDigitoN1">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
         <horstretch>0</horstretch>
@@ -451,7 +451,7 @@ QPushButton:pressed {
      </widget>
     </item>
     <item row="2" column="1">
-     <widget class="QPushButton" name="pushButtonDigito5">
+     <widget class="QPushButton" name="pushButtonDigitoN5">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
         <horstretch>0</horstretch>
@@ -488,7 +488,7 @@ QPushButton:pressed {
      </widget>
     </item>
     <item row="3" column="1">
-     <widget class="QPushButton" name="pushButtonDigito2">
+     <widget class="QPushButton" name="pushButtonDigitoN2">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
         <horstretch>0</horstretch>
@@ -525,7 +525,7 @@ QPushButton:pressed {
      </widget>
     </item>
     <item row="4" column="2">
-     <widget class="QPushButton" name="pushButtonOP_EQU">
+     <widget class="QPushButton" name="pushButtonOPN_EQU">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
         <horstretch>0</horstretch>
@@ -585,7 +585,7 @@ QPushButton:pressed {
      </widget>
     </item>
     <item row="4" column="3">
-     <widget class="QPushButton" name="pushButtonOP_ADD">
+     <widget class="QPushButton" name="pushButtonOPN_ADD">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
         <horstretch>0</horstretch>
@@ -645,7 +645,7 @@ QPushButton:pressed {
      </widget>
     </item>
     <item row="2" column="0">
-     <widget class="QPushButton" name="pushButtonDigito4">
+     <widget class="QPushButton" name="pushButtonDigitoN4">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
         <horstretch>0</horstretch>
@@ -682,7 +682,7 @@ QPushButton:pressed {
      </widget>
     </item>
     <item row="1" column="0">
-     <widget class="QPushButton" name="pushButtonDigito7">
+     <widget class="QPushButton" name="pushButtonDigitoN7">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
         <horstretch>0</horstretch>
@@ -719,7 +719,7 @@ QPushButton:pressed {
      </widget>
     </item>
     <item row="2" column="2">
-     <widget class="QPushButton" name="pushButtonDigito6">
+     <widget class="QPushButton" name="pushButtonDigitoN6">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
         <horstretch>0</horstretch>
@@ -756,7 +756,7 @@ QPushButton:pressed {
      </widget>
     </item>
     <item row="4" column="0">
-     <widget class="QPushButton" name="pushButtonDigito0">
+     <widget class="QPushButton" name="pushButtonDigitoN0">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
         <horstretch>0</horstretch>
@@ -793,7 +793,7 @@ QPushButton:pressed {
      </widget>
     </item>
     <item row="3" column="3">
-     <widget class="QPushButton" name="pushButtonOP_SUB">
+     <widget class="QPushButton" name="pushButtonOPN_SUB">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
         <horstretch>0</horstretch>
@@ -853,7 +853,7 @@ QPushButton:pressed {
      </widget>
     </item>
     <item row="1" column="3">
-     <widget class="QPushButton" name="pushButtonOP_DIV">
+     <widget class="QPushButton" name="pushButtonOPN_DIV">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
         <horstretch>0</horstretch>
@@ -913,7 +913,7 @@ QPushButton:pressed {
      </widget>
     </item>
     <item row="0" column="0">
-     <widget class="QPushButton" name="pushButtonClear">
+     <widget class="QPushButton" name="pushButtonN_Clear">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
         <horstretch>0</horstretch>
@@ -972,7 +972,7 @@ QPushButton:pressed {
      </widget>
     </item>
     <item row="0" column="1">
-     <widget class="QPushButton" name="pushButtonANS">
+     <widget class="QPushButton" name="pushButtonN_ANS">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
         <horstretch>0</horstretch>
@@ -1030,8 +1030,8 @@ QPushButton:pressed {
       </property>
      </widget>
     </item>
-    <item row="0" column="2">
-     <widget class="QPushButton" name="pushButtonBACK">
+    <item row="0" column="3">
+     <widget class="QPushButton" name="pushButtonN_BACK">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
         <horstretch>0</horstretch>
