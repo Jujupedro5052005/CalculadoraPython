@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(432, 395)
+        Dialog.resize(432, 373)
         Dialog.setStyleSheet("QWidget {\n"
 "    background-color: qlineargradient(\n"
 "        x1: 0, y1: 0,\n"
@@ -131,7 +131,7 @@ class Ui_Dialog(object):
         self.displayUser.setReadOnly(True)
         self.displayUser.setObjectName("displayUser")
         self.gridLayoutWidget = QtWidgets.QWidget(Dialog)
-        self.gridLayoutWidget.setGeometry(QtCore.QRect(40, 150, 341, 201))
+        self.gridLayoutWidget.setGeometry(QtCore.QRect(40, 149, 341, 208))
         self.gridLayoutWidget.setObjectName("gridLayoutWidget")
         self.gridLayout_4 = QtWidgets.QGridLayout(self.gridLayoutWidget)
         self.gridLayout_4.setSizeConstraint(QtWidgets.QLayout.SetDefaultConstraint)

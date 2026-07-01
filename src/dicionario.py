@@ -1,5 +1,5 @@
 class ElementsUI:
-
+    # Evitar usar vários .connect na lógica principal
     @staticmethod
     def digit_buttons(ui_type, screen):
         if screen == "ui_normal":
@@ -59,6 +59,6 @@ class ElementsUI:
                 28: ui_type.ui.pushButtonOPC_TAN,       # tangente
                 29: ui_type.ui.pushButtonOPC_PI,        # úmero PI
                 30: ui_type.ui.pushButtonOPC_PLUS_MINUS,
-                31: ui_type.ui.pushButtonOPC_TOGGLE_ANGLE
+                31: ui_type.ui.pushButtonOPC_TOGGLE_ANGLE,
             }
     

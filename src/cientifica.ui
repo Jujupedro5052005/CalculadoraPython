@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>432</width>
-    <height>395</height>
+    <height>373</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -180,9 +180,9 @@ QPushButton:pressed {
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>150</y>
+     <y>149</y>
      <width>341</width>
-     <height>201</height>
+     <height>208</height>
     </rect>
    </property>
    <layout class="QGridLayout" name="gridLayout_4" rowstretch="1,0,0,0,0" columnstretch="1,0,0,0,0,0,0,0,0">

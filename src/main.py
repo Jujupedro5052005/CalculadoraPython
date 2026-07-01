@@ -1,3 +1,10 @@
+#       -> Repositório público do GitHub <-
+# https://github.com/Jujupedro5052005/CalculadoraPython
+
+# Aluno: João Pedro de Jesus Cândido Silva
+# R.A.: 23.01416-4
+
+
 import inicial
 import normal
 import cientifica
@@ -75,9 +82,28 @@ class HandlerQT(QtCore.QObject):
         # INTERFACE MODO CIENTÍFICO
         # ==========================================================
         if self.mode == "scientific":
-            # Se a tela exibia erro, qualquer novo clique limpa o visor para recomeçar
             if self.engine.user_input == "Math Error":
                 self.engine.user_input = ""
+
+            # Evento para mostrar o histórico de cálculos
+            if "HIST" in name:
+                historico_lista = self.engine.history
+                
+                # Se não houver nenhuma conta feita ainda
+                if not historico_lista:
+                    texto_historico = "Nenhum cálculo registrado ainda."
+                else:
+                    # Junta todas as linhas do histórico que guardamos pulando uma linha
+                    texto_historico = "\n".join(historico_lista)
+                
+                # Abre um pop-up nativo do PyQt5 mostrando o histórico de um jeito bem elegante
+                msg = QtWidgets.QMessageBox(self.Dialog)
+                msg.setIcon(QtWidgets.QMessageBox.Information)
+                msg.setWindowTitle("Histórico de Cálculos - Científica")
+                msg.setText(texto_historico)
+                msg.setStandardButtons(QtWidgets.QMessageBox.Ok)
+                msg.exec_()
+                return
 
             # Alternador de unidade angular (DEG / RAD)
             if "TOGGLE_ANGLE" in name:
@@ -110,14 +136,50 @@ class HandlerQT(QtCore.QObject):
                 self.engine.user_input += "("
             elif "Paren2" in name:
                 self.engine.user_input += ")"
+
+            # --- Ajuste para cálculo direto com funções científicas ---
             elif "SQRT" in name:
-                self.engine.user_input += "sqrt("
+                if self.engine.user_input:
+                    try:
+                        # Tenta validar se o que está no visor é um número puro
+                        float(self.engine.user_input)
+                        self.engine.user_input = f"sqrt({self.engine.user_input})"
+                    except ValueError:
+                        # Se tiver letras ou operadores (como '5x'), apenas concatena a função aberta
+                        self.engine.user_input += "sqrt("
+                else:
+                    self.engine.user_input += "sqrt("
+
             elif "SIN" in name:
-                self.engine.user_input += "sin("
+                if self.engine.user_input:
+                    try:
+                        float(self.engine.user_input)
+                        self.engine.user_input = f"sin({self.engine.user_input})"
+                    except ValueError:
+                        self.engine.user_input += "sin("
+                else:
+                    self.engine.user_input += "sin("
+
             elif "COS" in name:
-                self.engine.user_input += "cos("
+                if self.engine.user_input:
+                    try:
+                        float(self.engine.user_input)
+                        self.engine.user_input = f"cos({self.engine.user_input})"
+                    except ValueError:
+                        self.engine.user_input += "cos("
+                else:
+                    self.engine.user_input += "cos("
+
             elif "TAN" in name:
-                self.engine.user_input += "tan("
+                if self.engine.user_input:
+                    try:
+                        float(self.engine.user_input)
+                        self.engine.user_input = f"tan({self.engine.user_input})"
+                    except ValueError:
+                        self.engine.user_input += "tan("
+                else:
+                    self.engine.user_input += "tan("
+            
             elif "POW" in name:
                 if self.engine.user_input:
                     self.engine.user_input = f"({self.engine.user_input})**2"
