@@ -72,6 +72,7 @@ class Ui_Dialog(object):
 "}")
         self.pushButtonVoltar.setObjectName("pushButtonVoltar")
         self.lineTextTitle = QtWidgets.QLineEdit(Dialog)
+        self.lineTextTitle.setEnabled(False)
         self.lineTextTitle.setGeometry(QtCore.QRect(70, 10, 301, 31))
         font = QtGui.QFont()
         font.setFamily("Montserrat")

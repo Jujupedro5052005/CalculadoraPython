@@ -84,6 +84,9 @@ QPushButton:pressed {
    </property>
   </widget>
   <widget class="QLineEdit" name="lineTextTitle">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>70</x>
