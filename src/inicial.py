@@ -30,6 +30,7 @@ class Ui_Dialog(object):
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout.setObjectName("verticalLayout")
         self.lineEdit = QtWidgets.QLineEdit(self.verticalLayoutWidget)
+        self.lineEdit.setEnabled(False)
         font = QtGui.QFont()
         font.setFamily("Consolas")
         font.setPointSize(-1)

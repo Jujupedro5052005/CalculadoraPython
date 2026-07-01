@@ -256,7 +256,7 @@ class HandlerQT(QtCore.QObject):
 
             # PERCENT
             elif "PER" in name:
-                self.user_input = f"({self.user_input})*100"
+                self.user_input = f"({self.user_input})/100"
 
             # INVERSE
             elif "INV" in name:
@@ -286,11 +286,19 @@ class HandlerQT(QtCore.QObject):
             # EQUALS
             elif "EQU" in name:
                 self.result = self.scientific_eval()
-                self.user_input = str(round(self.result, NUM_DEC))
-                self.expression = self.user_input   # allows chaining
+                if self.result is None:
+                    # scientific_eval already set self.user_input = "Math Error"
+                    self.expression = ""
+                else:
+                    self.user_input = str(round(self.result, NUM_DEC))
+                    self.expression = self.user_input   # allows chaining
                 self.display_update()
                 return
             
+            # Keep expression in sync with user_input so the next digit
+            # press (which rebuilds user_input from expression) doesn't
+            # wipe out operators/functions typed in this branch.
+            self.expression = self.user_input
             self.display_update()
             return
 
@@ -385,10 +393,15 @@ class HandlerQT(QtCore.QObject):
 
                 self.user_input = ""
 
+        # Keep expression in sync with user_input (same reasoning as in
+        # scientific mode) so digit entry after Clear/=/operators starts
+        # from the correct text instead of a stale expression.
+        self.expression = self.user_input
         self.display_update()
 
 
-if __name__ == "__main__":
+#if __name__ == "__main__":
+if True:
     # Inicializa a aplicacao
     app = QtWidgets.QApplication(sys.argv)
 
